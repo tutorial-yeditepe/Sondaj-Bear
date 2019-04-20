@@ -18,15 +18,9 @@ public class BuzMovement : MonoBehaviour
         pos = this.transform.position;
         charWidth = this.GetComponent<SpriteRenderer>().bounds.size.x;
         center = width / 2;
-        Debug.Log(charWidth);
-        Debug.Log(pos.x);
-        Debug.Log(width);
-        Debug.Log(height);
         float camDistance = Vector2.Distance(transform.position, Camera.main.transform.position);
         bottomCorner = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, camDistance));
         topCorner = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, camDistance));
-        Debug.Log(bottomCorner);
-        Debug.Log(topCorner);
     }
 
     void Update()
