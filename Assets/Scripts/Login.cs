@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using System.Text.RegularExpressions;
+using TMPro;
 
 public class Login : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class Login : MonoBehaviour
     public GameObject usernamePopUp;
     public GameObject passwordPopUp;
     public GameObject successPopUp;
+
+    public GameObject changedUsername;
+    public GameObject playGuestButton;
+    public GameObject playButton;
 
     private string Username;
     private string Password;
@@ -46,9 +51,11 @@ public class Login : MonoBehaviour
 
             emptyPopUp.SetActive(true);
         }
-        if(usernameValid == true && passwordValid == true) {    //If everthing is valid, call NameChanger method.
-
+        if(usernameValid == true && passwordValid == true) {    //If everthing is valid, show username and "Play!" texts.
             successPopUp.SetActive(true);
+            changedUsername.GetComponent<TextMeshProUGUI>().text = Username;
+            playGuestButton.SetActive(false);
+            playButton.SetActive(true);
             cleaner();
         }
     }
