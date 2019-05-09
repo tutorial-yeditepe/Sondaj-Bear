@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuzMovement : MonoBehaviour
+public class PlatformMovement : MonoBehaviour
 {
     [SerializeField] [Range(1.0f, 10.0f)] public float moveSpeed = 5.0f;
     private float width = Screen.width;
@@ -31,7 +31,7 @@ public class BuzMovement : MonoBehaviour
     void Move()
     {
         pos = this.transform.position;
-        if (Input.GetMouseButton(0) && Input.mousePosition.y > ((height*30)/100))
+        if (Input.GetMouseButton(0) && Input.mousePosition.y > ((height*60)/100))
         { 
             if (pos.x > bottomCorner.x + charWidth/2)
                 if (Input.GetMouseButton(0) && Input.mousePosition.x < center - 0.5)
