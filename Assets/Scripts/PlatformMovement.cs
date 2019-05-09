@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlatformMovement : MonoBehaviour
 {
-    [SerializeField] [Range(1.0f, 10.0f)] public float moveSpeed = 5.0f;
+    private PlayerStats player;
+
     private float width = Screen.width;
     private float height = Screen.height;
     private float charWidth;
@@ -12,6 +13,11 @@ public class PlatformMovement : MonoBehaviour
     private Vector2 bottomCorner;
     private Vector2 topCorner;
     private float center;
+
+    private void Awake()
+    {
+        player = transform.parent.GetComponentInChildren<PlayerStats>();
+    }
 
     private void Start()
     {
@@ -30,6 +36,8 @@ public class PlatformMovement : MonoBehaviour
 
     void Move()
     {
+        float moveSpeed = player.moveSpeed;
+
         pos = this.transform.position;
         if (Input.GetMouseButton(0) && Input.mousePosition.y > ((height*60)/100))
         { 

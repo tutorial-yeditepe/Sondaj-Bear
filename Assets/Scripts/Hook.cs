@@ -33,7 +33,7 @@ public class Hook : MonoBehaviour
             Ray ray;
 
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Debug.Log(ray);
+            //Debug.Log(ray);
 
             //Check if the ray hits any collider
             if (Physics.Raycast(ray, out hit))

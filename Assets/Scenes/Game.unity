@@ -129,11 +129,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 22032580}
-  - component: {fileID: 22032582}
+  - component: {fileID: 22032585}
   - component: {fileID: 22032581}
+  - component: {fileID: 22032582}
+  - component: {fileID: 22032583}
+  - component: {fileID: 22032584}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -165,7 +168,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c0fed9234cbc44eb2f9ca6eb4cbaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!212 &22032582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -214,6 +216,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &22032583
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22032579}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.115716, y: 3.6915007}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 22.08, y: 12.42}
+    newSize: {x: 22.08, y: 12.42}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.3548584, y: 6.765972}
+  m_EdgeRadius: 0
+--- !u!50 &22032584
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22032579}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &22032585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22032579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a234e248d8458344c8f3eed11124d4ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  scoreBoost: 1
+  hookSpeed: 1
 --- !u!1 &592773267
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,10 +874,10 @@ MonoBehaviour:
   - {fileID: 734123675615761104, guid: b0bfb1dbe95d854419e9e15295585b56, type: 3}
   - {fileID: 1545290227119595787, guid: f709b0abedb29cf4cbf41b8f5bfd9943, type: 3}
   - {fileID: 7677185590948222080, guid: e6cd83d80b6849341832c808ef685842, type: 3}
-  - {fileID: 1534163551259071439, guid: c20a4b0accb8b144ca07a7f83183613b, type: 3}
-  - {fileID: 3030124182486686995, guid: 42368ff5bb4cc6e4baa77ed3516e6be1, type: 3}
-  - {fileID: 9047452684770509525, guid: e00df6b8de592654c9edaf590b2d2972, type: 3}
-  - {fileID: 6999319219538618631, guid: f00e1bc516d02de40b787985d93d9c25, type: 3}
+  - {fileID: 7346980171107307984, guid: dbfa7aaf33aefd74fa47d91784831386, type: 3}
+  - {fileID: 7346980171107307984, guid: dbfa7aaf33aefd74fa47d91784831386, type: 3}
+  - {fileID: 7346980171107307984, guid: dbfa7aaf33aefd74fa47d91784831386, type: 3}
+  - {fileID: 7346980171107307984, guid: dbfa7aaf33aefd74fa47d91784831386, type: 3}
   spawnSides:
   - {fileID: 1400126322}
   - {fileID: 868200989}
