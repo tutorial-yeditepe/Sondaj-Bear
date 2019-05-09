@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject[] spawnees = new GameObject[6];
+    public GameObject[] spawnees = new GameObject[8];
     public GameObject[] spawnSides = new GameObject[2];
 
     private float spawnTime = 1;
