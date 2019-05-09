@@ -806,12 +806,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnees:
-  - {fileID: 6267595340879733002, guid: a2624b3c97ba5f3428c34b308fe8dc3e, type: 3}
-  - {fileID: 734123675615761104, guid: 8bb2597c7befc974e8c3e865ca9ad31a, type: 3}
-  - {fileID: 1545290227119595787, guid: 68326e13ebdc6cc43a35928f8c30b9bb, type: 3}
-  - {fileID: 7677185590948222080, guid: 63d1c55508f9d6841bdc45c6ec5f3395, type: 3}
-  - {fileID: 1534163551259071439, guid: 3812c9c824966384284253140746400b, type: 3}
-  - {fileID: 3030124182486686995, guid: 5deaa6091525464468b050e563d47041, type: 3}
+  - {fileID: 6267595340879733002, guid: 2ee1de8d10a32fe4494bfd8ec0604a72, type: 3}
+  - {fileID: 734123675615761104, guid: b0bfb1dbe95d854419e9e15295585b56, type: 3}
+  - {fileID: 1545290227119595787, guid: f709b0abedb29cf4cbf41b8f5bfd9943, type: 3}
+  - {fileID: 7677185590948222080, guid: e6cd83d80b6849341832c808ef685842, type: 3}
+  - {fileID: 1534163551259071439, guid: c20a4b0accb8b144ca07a7f83183613b, type: 3}
+  - {fileID: 3030124182486686995, guid: 42368ff5bb4cc6e4baa77ed3516e6be1, type: 3}
+  - {fileID: 9047452684770509525, guid: e00df6b8de592654c9edaf590b2d2972, type: 3}
+  - {fileID: 6999319219538618631, guid: f00e1bc516d02de40b787985d93d9c25, type: 3}
   spawnSides:
   - {fileID: 1400126322}
   - {fileID: 868200989}
