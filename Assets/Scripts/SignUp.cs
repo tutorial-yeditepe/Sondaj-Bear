@@ -18,6 +18,7 @@ public class SignUp : MonoBehaviour
 
     private string Username;
     private string Password;
+    private string form;
     private bool usernameValid = false;
     private bool passwordValid = false;
 
@@ -25,7 +26,7 @@ public class SignUp : MonoBehaviour
 
         if(Username != "" && Password != "") {      //Checking if username and password fields are empty or not.
 
-            if(System.IO.File.Exists(@"D:/Unity Projects/Sondaj_Bear/Users/"+Username+".txt")){       //Checking if username is taken.
+            if(System.IO.File.Exists(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+Username+".txt")){       //Checking if username is taken.
 
 
                 usernamePopUp.SetActive(true);
@@ -47,9 +48,11 @@ public class SignUp : MonoBehaviour
                     shortUsernamePopUp.SetActive(true);
                 }
             }
-            if(usernameValid == true && passwordValid == true) {        //If everthing is valid login successful.
+            if(usernameValid == true && passwordValid == true) {        //If everthing is valid sign up successful.
 
-                System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+Username+".txt",Password);
+                form = Password + Environment.NewLine + "0";
+                
+                System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+Username+".txt",form);
                 successfullPopUp.SetActive(true);
                 cleaner();
             }

@@ -20,8 +20,11 @@ public class Login : MonoBehaviour
     public GameObject playGuestButton;
     public GameObject playButton;
 
+    public GameObject playerCoins;
+
     private string Username;
     private string Password;
+    private string Coins;
     private bool usernameValid = false;
     private bool passwordValid = false;
     private String[] Lines;
@@ -30,14 +33,15 @@ public class Login : MonoBehaviour
 
         if(Username != "" && Password != "") {      //Check if username and password fields are empty or not.
 
-            if(System.IO.File.Exists(@"D:/Unity Projects/Sondaj_Bear/Users/"+Username+".txt")) {        //Check username.
+            if(System.IO.File.Exists(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+Username+".txt")) {        //Check username.
 
                 usernameValid = true;
-                Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+Username+".txt");
+                Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+Username+".txt");
   
                 if(Password == Lines[0]) {          //Check password.
 
                     passwordValid = true;
+                    Coins = Lines[1];
                 }else {
 
                     passwordPopUp.SetActive(true);
@@ -54,6 +58,7 @@ public class Login : MonoBehaviour
         if(usernameValid == true && passwordValid == true) {    //If everthing is valid, show username and "Play!" texts.
             successPopUp.SetActive(true);
             changedUsername.GetComponent<TextMeshProUGUI>().text = Username;
+            playerCoins.GetComponent<TextMeshProUGUI>().text = Coins;
             playGuestButton.SetActive(false);
             playButton.SetActive(true);
             cleaner();
