@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FishMovement : MonoBehaviour
+public class SpawneeMovement : MonoBehaviour
 {
-    private Vector3 pos;
-    private float fishSpeed = 5;
+    public float speed = 5;  // Public for easy debugging.
     private int dir;
 
     void Start()
@@ -20,9 +19,9 @@ public class FishMovement : MonoBehaviour
 
     void Update()
     {
-        pos = transform.position;
+        Vector2 pos = transform.position;
 
-        pos.x += fishSpeed * dir;
+        pos.x += speed * dir;
         transform.position = pos;
 
         if (pos.x > 650 | pos.x < -400)

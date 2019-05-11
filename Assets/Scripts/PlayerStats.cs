@@ -9,15 +9,4 @@ public class PlayerStats : MonoBehaviour
     public float hookSpeed = 1;  // Speed of the hook.
 
     private float totalPoint;
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
