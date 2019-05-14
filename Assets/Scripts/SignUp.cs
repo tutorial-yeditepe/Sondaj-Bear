@@ -50,7 +50,8 @@ public class SignUp : MonoBehaviour
             }
             if(usernameValid == true && passwordValid == true) {        //If everthing is valid sign up successful.
 
-                form = Password + Environment.NewLine + "0";
+                //Form as follows: password / coin / costume1 / costume2 / costume3 / costume4 / costume5
+                form = Password + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0";
                 
                 System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+Username+".txt",form);
                 successfullPopUp.SetActive(true);
