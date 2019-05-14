@@ -21,6 +21,16 @@ public class Login : MonoBehaviour
     public GameObject playButton;
 
     public GameObject playerCoins;
+    public GameObject costume1NotBought;
+    public GameObject costume2NotBought;
+    public GameObject costume3NotBought;
+    public GameObject costume4NotBought;
+    public GameObject costume5NotBought;
+    public GameObject costume1Bought;
+    public GameObject costume2Bought;
+    public GameObject costume3Bought;
+    public GameObject costume4Bought;
+    public GameObject costume5Bought;
 
     private string Username;
     private string Password;
@@ -55,7 +65,65 @@ public class Login : MonoBehaviour
 
             emptyPopUp.SetActive(true);
         }
-        if(usernameValid == true && passwordValid == true) {    //If everthing is valid, show username and "Play!" texts.
+        if(usernameValid == true && passwordValid == true) {    //If everthing is valid, show username and "Play!" texts. Check costumes and trophies.
+
+            //Costume1 checking.
+            if(Lines[2] == "0") {
+
+                costume1Bought.SetActive(false);
+                costume1NotBought.SetActive(true);
+            }else {
+                costume1Bought.SetActive(true);
+                costume1NotBought.SetActive(false);
+            }
+
+            //Costume2 checking.
+            if(Lines[3] == "0") {
+
+                costume2Bought.SetActive(false);
+                costume2NotBought.SetActive(true);
+            }else {
+
+                costume2Bought.SetActive(true);
+                costume2NotBought.SetActive(false);
+
+            }
+
+            //Costume3 checking.
+            if(Lines[4] == "0") {
+
+                costume3Bought.SetActive(false);
+                costume3NotBought.SetActive(true);
+            }else {
+                costume3Bought.SetActive(true);
+                costume3NotBought.SetActive(false);
+            }
+
+            //Costume4 checking.
+            if(Lines[5] == "0") {
+
+                costume4Bought.SetActive(false);
+                costume4NotBought.SetActive(true);
+            }else {
+
+                costume4Bought.SetActive(true);
+                costume4NotBought.SetActive(false);
+
+            }
+
+            //Costume5 checking.
+            if(Lines[6] == "0") {
+
+                costume5Bought.SetActive(false);
+                costume5NotBought.SetActive(true);
+            }else {
+
+                costume5Bought.SetActive(true);
+                costume5NotBought.SetActive(false);
+
+            }
+
+
             successPopUp.SetActive(true);
             changedUsername.GetComponent<TextMeshProUGUI>().text = Username;
             playerCoins.GetComponent<TextMeshProUGUI>().text = Coins;
