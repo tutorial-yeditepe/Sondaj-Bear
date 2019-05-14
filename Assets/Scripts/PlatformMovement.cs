@@ -39,20 +39,46 @@ public class PlatformMovement : MonoBehaviour
         float moveSpeed = player.moveSpeed;
 
         pos = this.transform.position;
-        if (Input.GetMouseButton(0) && Input.mousePosition.y > ((height*60)/100))
-        { 
-            if (pos.x > bottomCorner.x + charWidth/2)
+       
+        if ((Input.GetMouseButton(0) && Input.mousePosition.y > ((height*60)/100)) || (Input.touchCount > 0))
+        {
+#if UNITY_EDITOR
+            if (pos.x > bottomCorner.x + charWidth / 2)
                 if (Input.GetMouseButton(0) && Input.mousePosition.x < center - 0.5)
                 {
                     pos.x = pos.x - moveSpeed;
                     this.transform.position = pos;
                 }
-            if (pos.x < topCorner.x - charWidth/2)
+            if (pos.x < topCorner.x - charWidth / 2)
                 if (Input.GetMouseButton(0) && Input.mousePosition.x > center + 0.5)
                 {
                     pos.x = pos.x + moveSpeed;
                     this.transform.position = pos;
                 }
+
+#endif
+#if UNITY_ANDROID || UNITY_IOS
+            int touchCount = Input.touchCount;
+            for (int i = 0; i < touchCount; i++)
+            {
+                Touch touch = Input.GetTouch(i);
+
+                if (touch.position.y > ((height * 60) / 100)) {
+                    if (pos.x > bottomCorner.x + charWidth / 2)
+                        if (touch.position.x < center - 0.5)
+                        {
+                            pos.x = pos.x - moveSpeed;
+                            this.transform.position = pos;
+                        }
+                    if (pos.x < topCorner.x - charWidth / 2)
+                        if (touch.position.x > center + 0.5)
+                        {
+                            pos.x = pos.x + moveSpeed;
+                            this.transform.position = pos;
+                        }
+                }
+            }
+#endif
         }
     }
 }
