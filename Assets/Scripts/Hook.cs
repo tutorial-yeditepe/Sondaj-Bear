@@ -16,7 +16,7 @@ public class Hook : MonoBehaviour
 
     void Start()
     {
-        startPoint = gameObject.transform.position;
+        startPoint = gameObject.transform.localPosition;
     }
 
     void Update()
@@ -31,17 +31,16 @@ public class Hook : MonoBehaviour
                 //Check if the ray hits any collider
                 if (hit.collider != null)
                 {
-                    Debug.Log("hit");
                     //set a flag to indicate to move the gameobject
                     flag = true;
                     timeStartedLerping = Time.time;
                     //save the click / tap position
-                    endPoint = hit.point;
+                    endPoint = transform.InverseTransformPoint(hit.point);
+                    endPoint.x = endPoint.x / 2;
+                    endPoint.y = endPoint.y / 1.5f;
                     Debug.Log(endPoint);
                 }
         }
-        Debug.Log(hasArrived);
-        //Debug.Log(flag);
 
         if (flag)
         {
@@ -50,7 +49,7 @@ public class Hook : MonoBehaviour
             float percentageComplete = timeSinceStarted / duration;
             //Debug.Log(percentageComplete + "if");
 
-            gameObject.transform.position = Vector2.Lerp(gameObject.transform.position, endPoint, percentageComplete * speed);
+            gameObject.transform.localPosition = Vector2.Lerp(gameObject.transform.localPosition, endPoint, percentageComplete * speed);
 
             if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended) || (Input.GetMouseButtonUp(0)))
             {
@@ -64,9 +63,9 @@ public class Hook : MonoBehaviour
             float percentageComplete = timeSinceStarted / duration;
             //Debug.Log(percentageComplete+"else");
 
-            gameObject.transform.position = Vector2.Lerp(gameObject.transform.position, startPoint, percentageComplete * speed);
+            gameObject.transform.localPosition = Vector2.Lerp(gameObject.transform.localPosition, startPoint, percentageComplete * speed);
 
-            if (Mathf.Approximately(Mathf.Round(gameObject.transform.position.x),Mathf.Round(startPoint.x)) && Mathf.Approximately(Mathf.Round(gameObject.transform.position.y), Mathf.Round(startPoint.y)))
+            if (Mathf.Approximately(Mathf.Round(gameObject.transform.localPosition.x),Mathf.Round(startPoint.x)) && Mathf.Approximately(Mathf.Round(gameObject.transform.localPosition.y), Mathf.Round(startPoint.y)))
                 hasArrived = true;
         }
     }
