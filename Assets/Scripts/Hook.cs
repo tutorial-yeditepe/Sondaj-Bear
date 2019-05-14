@@ -27,7 +27,7 @@ public class Hook : MonoBehaviour
         //check if the screen is touched / clicked   
         if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began) || (Input.GetMouseButtonDown(0)))
         {
-            //if (hasArrived)
+            if (hasArrived)
                 //Check if the ray hits any collider
                 if (hit.collider != null)
                 {
@@ -40,12 +40,9 @@ public class Hook : MonoBehaviour
                     Debug.Log(endPoint);
                 }
         }
-        //Debug.Log(hasArrived);
-        Debug.Log(flag);
-    }
+        Debug.Log(hasArrived);
+        //Debug.Log(flag);
 
-    private void FixedUpdate()
-    {
         if (flag)
         {
             hasArrived = false;
@@ -53,7 +50,7 @@ public class Hook : MonoBehaviour
             float percentageComplete = timeSinceStarted / duration;
             //Debug.Log(percentageComplete + "if");
 
-            gameObject.transform.position = Vector2.Lerp(gameObject.transform.position, endPoint, percentageComplete*speed);
+            gameObject.transform.position = Vector2.Lerp(gameObject.transform.position, endPoint, percentageComplete * speed);
 
             if ((Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Ended) || (Input.GetMouseButtonUp(0)))
             {
@@ -67,12 +64,11 @@ public class Hook : MonoBehaviour
             float percentageComplete = timeSinceStarted / duration;
             //Debug.Log(percentageComplete+"else");
 
-            gameObject.transform.position = Vector2.Lerp(gameObject.transform.position, startPoint, percentageComplete*speed);
+            gameObject.transform.position = Vector2.Lerp(gameObject.transform.position, startPoint, percentageComplete * speed);
 
-            /*if (percentageComplete >= 1.0f)
-                hasArrived = true;*/
+            if (Mathf.Approximately(Mathf.Round(gameObject.transform.position.x),Mathf.Round(startPoint.x)) && Mathf.Approximately(Mathf.Round(gameObject.transform.position.y), Mathf.Round(startPoint.y)))
+                hasArrived = true;
         }
     }
-
 }
 
