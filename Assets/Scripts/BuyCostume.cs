@@ -8,15 +8,17 @@ using TMPro;
 
 public class BuyCostume : MonoBehaviour
 {
-
+    //Variables.
     public GameObject playerCoins;
     public GameObject costumeCost;
     public GameObject UserName;
 
+    //Button variables.
     public GameObject notEnoughCoinsPopUp;
     public GameObject costumeNotBought;
     public GameObject costumeBought;
     
+    //Variables for coin calculation.
     private string playerCoin1;
     private int playerCoin2;
     private string costumeCoin1;
@@ -26,7 +28,12 @@ public class BuyCostume : MonoBehaviour
     private string userName;
     private string form;
 
-    public void BuyOperation1() {
+    //These BuyOperation methods basically does:
+    //Check if coin is enough to buy.
+    //If enough confirm buy and change necessary variables at .txt file.
+    //If not show error pop-up message.
+
+    public void BuyOperation1() {       //Buy operation for costume1.
 
         playerCoin1 = playerCoins.GetComponent<TextMeshProUGUI>().text;
         playerCoin2 = Int32.Parse(playerCoin1);
@@ -43,10 +50,10 @@ public class BuyCostume : MonoBehaviour
 
 
             userName = UserName.GetComponent<TextMeshProUGUI>().text;
-            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+userName+".txt");
+            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
 
-            form = Lines[0] + Environment.NewLine + playerCoin1 + Environment.NewLine + "1" + Environment.NewLine + Lines[3] + Environment.NewLine + Lines[4] + Environment.NewLine + Lines[5] + Environment.NewLine + Lines[6]; 
-            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+userName+".txt",form);
+            form = Lines[0] + Environment.NewLine + playerCoin1 + Environment.NewLine + Lines[2] + Environment.NewLine + "1" + Environment.NewLine + Lines[4] + Environment.NewLine + Lines[5] + Environment.NewLine + Lines[6] + Environment.NewLine + Lines[7]; 
+            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
 
 
         }else {
@@ -56,7 +63,7 @@ public class BuyCostume : MonoBehaviour
 
     }
 
-    public void BuyOperation2() {
+    public void BuyOperation2() {       //Buy operation for costume2.
         
         playerCoin1 = playerCoins.GetComponent<TextMeshProUGUI>().text;
         playerCoin2 = Int32.Parse(playerCoin1);
@@ -73,10 +80,10 @@ public class BuyCostume : MonoBehaviour
 
 
             userName = UserName.GetComponent<TextMeshProUGUI>().text;
-            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+userName+".txt");
+            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
 
-            form = Lines[0] + Environment.NewLine + playerCoin1 + Environment.NewLine + Lines[2] + Environment.NewLine + "1" + Environment.NewLine + Lines[4] + Environment.NewLine + Lines[5] + Environment.NewLine + Lines[6]; 
-            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+userName+".txt",form);
+            form = Lines[0] + Environment.NewLine + playerCoin1 + Environment.NewLine + Lines[2] + Environment.NewLine + Lines[3] + Environment.NewLine + "1" + Environment.NewLine + Lines[5] + Environment.NewLine + Lines[6] + Environment.NewLine + Lines[7];
+            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
 
 
         }else {
@@ -85,7 +92,7 @@ public class BuyCostume : MonoBehaviour
         }
     }
 
-    public void BuyOperation3() {
+    public void BuyOperation3() {       //Buy operation for costume3.
 
         playerCoin1 = playerCoins.GetComponent<TextMeshProUGUI>().text;
         playerCoin2 = Int32.Parse(playerCoin1);
@@ -102,10 +109,10 @@ public class BuyCostume : MonoBehaviour
 
 
             userName = UserName.GetComponent<TextMeshProUGUI>().text;
-            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+userName+".txt");
+            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
 
-            form = Lines[0] + Environment.NewLine + playerCoin1 + Environment.NewLine + Lines[2] + Environment.NewLine + Lines[3] + Environment.NewLine + "1" + Environment.NewLine + Lines[5] + Environment.NewLine + Lines[6]; 
-            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+userName+".txt",form);
+            form = Lines[0] + Environment.NewLine + playerCoin1 + Environment.NewLine + Lines[2] + Environment.NewLine + Lines[3] + Environment.NewLine + Lines[4] + Environment.NewLine + "1" + Environment.NewLine + Lines[6] + Environment.NewLine + Lines[7];
+            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
 
 
         }else {
@@ -114,7 +121,7 @@ public class BuyCostume : MonoBehaviour
         }
     }
 
-    public void BuyOperation4() {
+    public void BuyOperation4() {       //Buy operation for costume4.
 
         playerCoin1 = playerCoins.GetComponent<TextMeshProUGUI>().text;
         playerCoin2 = Int32.Parse(playerCoin1);
@@ -131,10 +138,10 @@ public class BuyCostume : MonoBehaviour
 
 
             userName = UserName.GetComponent<TextMeshProUGUI>().text;
-            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+userName+".txt");
+            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
 
-            form = Lines[0] + Environment.NewLine + playerCoin1 + Environment.NewLine + Lines[2] + Environment.NewLine + Lines[3] + Environment.NewLine + Lines[4] + Environment.NewLine + "1" + Environment.NewLine + Lines[6]; 
-            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+userName+".txt",form);
+            form = Lines[0] + Environment.NewLine + playerCoin1 + Environment.NewLine + Lines[2] + Environment.NewLine + Lines[3] + Environment.NewLine + Lines[4] + Environment.NewLine + Lines[5] + Environment.NewLine + "1" + Environment.NewLine + Lines[7];
+            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
 
 
         }else {
@@ -143,7 +150,7 @@ public class BuyCostume : MonoBehaviour
         }
     }
 
-    public void BuyOperation5() {
+    public void BuyOperation5() {       //Buy operation for costume5.
 
         playerCoin1 = playerCoins.GetComponent<TextMeshProUGUI>().text;
         playerCoin2 = Int32.Parse(playerCoin1);
@@ -160,10 +167,10 @@ public class BuyCostume : MonoBehaviour
 
 
             userName = UserName.GetComponent<TextMeshProUGUI>().text;
-            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+userName+".txt");
+            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
 
-            form = Lines[0] + Environment.NewLine + playerCoin1 + Environment.NewLine + Lines[2] + Environment.NewLine + Lines[3] + Environment.NewLine + Lines[4] + Environment.NewLine + Lines[5] + Environment.NewLine + "1"; 
-            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+userName+".txt",form);
+            form = Lines[0] + Environment.NewLine + playerCoin1 + Environment.NewLine + Lines[2] + Environment.NewLine + Lines[3] + Environment.NewLine + Lines[4] + Environment.NewLine + Lines[5] + Environment.NewLine + Lines[6] + Environment.NewLine + "1";
+            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
 
 
         }else {

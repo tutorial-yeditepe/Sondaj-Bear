@@ -26,7 +26,7 @@ public class SignUp : MonoBehaviour
 
         if(Username != "" && Password != "") {      //Checking if username and password fields are empty or not.
 
-            if(System.IO.File.Exists(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+Username+".txt")){       //Checking if username is taken.
+            if(System.IO.File.Exists(@"D:/Unity Projects/Sondaj_Bear/Users/"+Username+".txt")){       //Checking if username is taken.
 
 
                 usernamePopUp.SetActive(true);
@@ -50,10 +50,10 @@ public class SignUp : MonoBehaviour
             }
             if(usernameValid == true && passwordValid == true) {        //If everthing is valid sign up successful.
 
-                //Form as follows: password / coin / costume1 / costume2 / costume3 / costume4 / costume5
-                form = Password + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0";
+                //Form as follows: password / coin / currentCostume /costume1 / costume2 / costume3 / costume4 / costume5
+                form = Password + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0";
                 
-                System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/Login/"+Username+".txt",form);
+                System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+Username+".txt",form);
                 successfullPopUp.SetActive(true);
                 cleaner();
             }
@@ -69,11 +69,6 @@ public class SignUp : MonoBehaviour
         password.GetComponent<InputField>().text = "";
         usernameValid = false;
         passwordValid = false;
-    }
-
-    void Start()
-    {
-        
     }
 
     // Update is called once per frame
