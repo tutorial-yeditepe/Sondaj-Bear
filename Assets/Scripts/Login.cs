@@ -55,6 +55,9 @@ public class Login : MonoBehaviour
     private bool passwordValid = false;
     private String[] Lines;
 
+    //Line checking as follows: 
+    //password / coin / currentCostume / #ofcostumes /costume1 / costume2 / costume3 / costume4 / costume5 / trophy1 / trophy2 / trophy3 / trophy4 / trophy5 / trophy6 /
+
     public void LoginOperation() {
 
         if(Username != "" && Password != "") {      //Check if username and password fields are empty or not.
@@ -84,7 +87,7 @@ public class Login : MonoBehaviour
         if(usernameValid == true && passwordValid == true) {    //If everthing is valid, show username and "Play!" texts. Check costumes and trophies.
 
             //Costume1 checking.
-            if(Lines[3] == "0") {
+            if(Lines[4] == "0") {
 
                 costume1Bought.SetActive(false);
                 costume1NotBought.SetActive(true);
@@ -94,7 +97,7 @@ public class Login : MonoBehaviour
             }
 
             //Costume2 checking.
-            if(Lines[4] == "0") {
+            if(Lines[5] == "0") {
 
                 costume2Bought.SetActive(false);
                 costume2NotBought.SetActive(true);
@@ -106,7 +109,7 @@ public class Login : MonoBehaviour
             }
 
             //Costume3 checking.
-            if(Lines[5] == "0") {
+            if(Lines[6] == "0") {
 
                 costume3Bought.SetActive(false);
                 costume3NotBought.SetActive(true);
@@ -116,7 +119,7 @@ public class Login : MonoBehaviour
             }
 
             //Costume4 checking.
-            if(Lines[6] == "0") {
+            if(Lines[7] == "0") {
 
                 costume4Bought.SetActive(false);
                 costume4NotBought.SetActive(true);
@@ -128,7 +131,7 @@ public class Login : MonoBehaviour
             }
 
             //Costume5 checking.
-            if(Lines[7] == "0") {
+            if(Lines[8] == "0") {
 
                 costume5Bought.SetActive(false);
                 costume5NotBought.SetActive(true);
