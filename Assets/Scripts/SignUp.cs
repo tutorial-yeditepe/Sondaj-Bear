@@ -28,7 +28,6 @@ public class SignUp : MonoBehaviour
 
             if(System.IO.File.Exists(Application.persistentDataPath+"/"+Username+".txt")){       //Checking if username is taken.
 
-
                 usernamePopUp.SetActive(true);
 
             }else {                        
@@ -50,8 +49,44 @@ public class SignUp : MonoBehaviour
             }
             if(usernameValid == true && passwordValid == true) {        //If everthing is valid sign up successful.
 
-                //Form as follows: password / coin / currentCostume / #ofcostumes /costume1 / costume2 / costume3 / costume4 / costume5 / trophy1 / trophy2 / trophy3 / trophy4 / trophy5 / trophy6 / 
-                form = Password + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0" + Environment.NewLine + "0";
+                if(Username == "admin") {
+
+                    //Form as follows: password / coin / currentCostume / #ofcostumes /costume1 / costume2 / costume3 / costume4 / costume5 / trophy1 / trophy2 / trophy3 / trophy4 / trophy5 / trophy6 / 
+                form = Password 
+                + Environment.NewLine + "20000" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0";
+
+                }else {
+                    //Form as follows: password / coin / currentCostume / #ofcostumes /costume1 / costume2 / costume3 / costume4 / costume5 / trophy1 / trophy2 / trophy3 / trophy4 / trophy5 / trophy6 / 
+                form = Password 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0" 
+                + Environment.NewLine + "0";
+                }
+                
                 
                 System.IO.File.WriteAllText(Application.persistentDataPath+"/"+Username+".txt",form);
                 successfullPopUp.SetActive(true);
