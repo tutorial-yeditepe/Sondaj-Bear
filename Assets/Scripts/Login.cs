@@ -70,10 +70,10 @@ public class Login : MonoBehaviour
 
         if(Username != "" && Password != "") {      //Check if username and password fields are empty or not.
 
-            if(System.IO.File.Exists(@"D:/Unity Projects/Sondaj_Bear/Users/"+Username+".txt")) {        //Check username.
+            if(System.IO.File.Exists(Application.persistentDataPath+"/"+Username+".txt")) {        //Check username.
 
                 usernameValid = true;
-                Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+Username+".txt");
+                Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+Username+".txt");
   
                 if(Password == Lines[0]) {          //Check password.
 
