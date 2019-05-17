@@ -135,6 +135,7 @@ public class BuyCostume : MonoBehaviour
 
             }else {
 
+                numberOfCostumes = numberOfCostumesTrophy.ToString();
                 form = Lines[0] 
                 + Environment.NewLine + playerCoin1 
                 + Environment.NewLine + Lines[2] 
@@ -254,7 +255,8 @@ public class BuyCostume : MonoBehaviour
                 trophyMessagePanel.SetActive(true);
 
             }else {
-
+                
+                numberOfCostumes = numberOfCostumesTrophy.ToString();
                 form = Lines[0] 
                 + Environment.NewLine + playerCoin1 
                 + Environment.NewLine + Lines[2] 
@@ -374,6 +376,7 @@ public class BuyCostume : MonoBehaviour
                 
             }else {
 
+                numberOfCostumes = numberOfCostumesTrophy.ToString();
                 form = Lines[0] 
                 + Environment.NewLine + playerCoin1 
                 + Environment.NewLine + Lines[2] 
@@ -493,6 +496,7 @@ public class BuyCostume : MonoBehaviour
                 
             }else {
 
+                numberOfCostumes = numberOfCostumesTrophy.ToString();
                 form = Lines[0] 
                 + Environment.NewLine + playerCoin1 
                 + Environment.NewLine + Lines[2] 
@@ -612,6 +616,7 @@ public class BuyCostume : MonoBehaviour
                 
             }else {
 
+                numberOfCostumes = numberOfCostumesTrophy.ToString();
                 form = Lines[0] 
                 + Environment.NewLine + playerCoin1 
                 + Environment.NewLine + Lines[2] 

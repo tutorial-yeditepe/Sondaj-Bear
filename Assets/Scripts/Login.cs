@@ -48,6 +48,14 @@ public class Login : MonoBehaviour
     public GameObject Profile4;
     public GameObject Profile5;
 
+    //Trophy checking variables
+    public GameObject trophy1;
+    public GameObject trophy2;
+    public GameObject trophy3;
+    public GameObject trophy4;
+    public GameObject trophy5;
+    public GameObject trophy6;
+
     private string Username;
     private string Password;
     private string Coins;
@@ -226,7 +234,42 @@ public class Login : MonoBehaviour
                 Profile5.SetActive(true);
             }
 
+            //Check and show unlocked trophies;
+            if(Lines[9] == "1") {           //Trophy1
+                trophy1.SetActive(true);
+            }else {
+                trophy1.SetActive(false);
+            }
 
+            if(Lines[10] == "1") {      //Trophy2
+                trophy2.SetActive(true);
+            }else {
+                trophy2.SetActive(false);
+            }
+
+            if(Lines[11] == "1") {      //Trophy3
+                trophy3.SetActive(true);
+            }else {
+                trophy3.SetActive(false);
+            }
+
+            if(Lines[12] == "1") {      //Trophy4
+                trophy4.SetActive(true);
+            }else {
+                trophy4.SetActive(false);
+            }
+
+            if(Lines[13] == "1") {      //Trophy5
+                trophy5.SetActive(true);
+            }else {
+                trophy5.SetActive(false);
+            }
+
+            if(Lines[14] == "1") {      //Trophy6
+                trophy6.SetActive(true);
+            }else {
+                trophy6.SetActive(false);
+            }
             successPopUp.SetActive(true);
             changedUsername.GetComponent<TextMeshProUGUI>().text = Username;
             playerCoins.GetComponent<TextMeshProUGUI>().text = Coins;
