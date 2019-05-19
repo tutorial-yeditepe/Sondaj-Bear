@@ -17,7 +17,7 @@ public class SpawneeMovement : MonoBehaviour
         else
             dir = -1;
 
-        AssignPoint();
+        AssignPointSpeed();
     }
 
     void Update()
@@ -33,15 +33,62 @@ public class SpawneeMovement : MonoBehaviour
         }
     }
 
-    void AssignPoint()
+    void AssignPointSpeed()
     {
         if (name == "1(Clone)")
-            point = 100;
+        {
+            point = 5;
+            speed = 5;
+        }
         else if (name == "2(Clone)")
-            point = 150;
+        {
+            point = 10;
+            speed = 5;
+        }
+        else if (name == "3(Clone)")
+        {
+            point = 10;
+            speed = 5;
+        }
+        else if (name == "4(Clone)")
+        {
+            point = 10;
+            speed = 5;
+        }
+        else if (name == "5(Clone)")
+        {
+            point = 10;
+            speed = 5;
+        }
+        else if (name == "6(Clone)")
+        {
+            point = 10;
+            speed = 5;
+        }
+        else if (name == "7(Clone)")
+        {
+            point = 10;
+            speed = 5;
+        }
+        else if (name == "8(Clone)")
+        {
+            point = 10;
+            speed = 5;
+        }
         else if (name == "FastHook(Clone)")
-            point = 50;
+        {
+            point = 10;
+            speed = 5;
+        }
         else if (name == "ScoreBoost(Clone)")
-            point = 50;
+        {
+            point = 10;
+            speed = 5;
+        }
+        else if (name == "SpeedUp(Clone)")
+        {
+            point = 10;
+            speed = 5;
+        }
     }
 }

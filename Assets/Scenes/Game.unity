@@ -914,7 +914,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnees:
+  - {fileID: 4698632748182076498, guid: 349d8403201a6464989f52e3bfe4bd07, type: 3}
   - {fileID: 627659490232889366, guid: ebb48ffc99f07a94880e94535425e6da, type: 3}
+  - {fileID: 1374496167726533558, guid: dbfa7aaf33aefd74fa47d91784831386, type: 3}
   spawnSides:
   - {fileID: 1400126322}
   - {fileID: 868200989}

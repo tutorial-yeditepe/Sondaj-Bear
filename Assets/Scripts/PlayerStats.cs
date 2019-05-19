@@ -8,5 +8,5 @@ public class PlayerStats : MonoBehaviour
     public float scoreBoost = 1;  // Point multiplier.
     [SerializeField] [Range(4.0f, 100.0f)] public float hookSpeed = 4.0f;  // Speed of the hook.
 
-    public float totalPoint = 0;
+    public int totalPoint = 0;
 }
