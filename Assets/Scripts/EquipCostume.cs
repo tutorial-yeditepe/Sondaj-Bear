@@ -38,7 +38,7 @@ public class EquipCostume : MonoBehaviour
     public void EquipOperation0() {
 
         userName = UserName.GetComponent<TextMeshProUGUI>().text;
-        Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
+        Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
 
         form = Lines[0] 
                 + Environment.NewLine + Lines[1] 
@@ -56,7 +56,7 @@ public class EquipCostume : MonoBehaviour
                 + Environment.NewLine + Lines[13] 
                 + Environment.NewLine + Lines[14];
 
-        System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
+        System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
 
         defaultProfile.SetActive(true);
         Profile1.SetActive(false);
@@ -72,7 +72,7 @@ public class EquipCostume : MonoBehaviour
     public void EquipOperation1() {
 
         userName = UserName.GetComponent<TextMeshProUGUI>().text;
-        Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
+        Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
 
         form = Lines[0] 
                 + Environment.NewLine + Lines[1] 
@@ -90,7 +90,7 @@ public class EquipCostume : MonoBehaviour
                 + Environment.NewLine + Lines[13] 
                 + Environment.NewLine + Lines[14];
 
-        System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
+        System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
 
         defaultProfile.SetActive(false);
         Profile1.SetActive(true);
@@ -106,7 +106,7 @@ public class EquipCostume : MonoBehaviour
     public void EquipOperation2() {
 
         userName = UserName.GetComponent<TextMeshProUGUI>().text;
-        Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
+        Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
 
         form = Lines[0] 
                 + Environment.NewLine + Lines[1] 
@@ -124,7 +124,7 @@ public class EquipCostume : MonoBehaviour
                 + Environment.NewLine + Lines[13] 
                 + Environment.NewLine + Lines[14];
 
-        System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
+        System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
 
         defaultProfile.SetActive(false);
         Profile1.SetActive(false);
@@ -140,7 +140,7 @@ public class EquipCostume : MonoBehaviour
     public void EquipOperation3() {
 
         userName = UserName.GetComponent<TextMeshProUGUI>().text;
-        Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
+        Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
 
         form = Lines[0] 
                 + Environment.NewLine + Lines[1] 
@@ -158,7 +158,7 @@ public class EquipCostume : MonoBehaviour
                 + Environment.NewLine + Lines[13] 
                 + Environment.NewLine + Lines[14];
         
-        System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
+        System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
 
         defaultProfile.SetActive(false);
         Profile1.SetActive(false);
@@ -174,7 +174,7 @@ public class EquipCostume : MonoBehaviour
     public void EquipOperation4() {
 
         userName = UserName.GetComponent<TextMeshProUGUI>().text;
-        Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
+        Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
 
         form = Lines[0] 
                 + Environment.NewLine + Lines[1] 
@@ -192,7 +192,7 @@ public class EquipCostume : MonoBehaviour
                 + Environment.NewLine + Lines[13] 
                 + Environment.NewLine + Lines[14];
         
-        System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
+        System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
 
         defaultProfile.SetActive(false);
         Profile1.SetActive(false);
@@ -208,7 +208,7 @@ public class EquipCostume : MonoBehaviour
     public void EquipOperation5() {
 
         userName = UserName.GetComponent<TextMeshProUGUI>().text;
-        Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
+        Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
 
         form = Lines[0] 
                 + Environment.NewLine + Lines[1] 
@@ -226,7 +226,7 @@ public class EquipCostume : MonoBehaviour
                 + Environment.NewLine + Lines[13] 
                 + Environment.NewLine + Lines[14];
 
-        System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
+        System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
 
         defaultProfile.SetActive(false);
         Profile1.SetActive(false);

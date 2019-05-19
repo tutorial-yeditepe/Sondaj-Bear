@@ -59,7 +59,7 @@ public class BuyCostume : MonoBehaviour
             playerCoin1 = playerCoin2.ToString();
 
             userName = UserName.GetComponent<TextMeshProUGUI>().text;
-            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
+            Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
 
             //For trophy unlocking.
             numberOfCostumes = Lines[3];
@@ -154,7 +154,7 @@ public class BuyCostume : MonoBehaviour
 
             }
             
-            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
+            System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
             costumeNotBought.SetActive(false);
             costumeBought.SetActive(true);
 
@@ -180,7 +180,7 @@ public class BuyCostume : MonoBehaviour
             playerCoin1 = playerCoin2.ToString();
             
             userName = UserName.GetComponent<TextMeshProUGUI>().text;
-            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
+            Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
 
             //For trophy unlocking.
             numberOfCostumes = Lines[3];
@@ -275,7 +275,7 @@ public class BuyCostume : MonoBehaviour
 
             }
             
-            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
+            System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
             costumeNotBought.SetActive(false);
             costumeBought.SetActive(true);
 
@@ -300,7 +300,7 @@ public class BuyCostume : MonoBehaviour
             playerCoin1 = playerCoin2.ToString();
 
             userName = UserName.GetComponent<TextMeshProUGUI>().text;
-            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
+            Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
 
             //For trophy unlocking.
             numberOfCostumes = Lines[3];
@@ -395,7 +395,7 @@ public class BuyCostume : MonoBehaviour
 
             }
             
-            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
+            System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
             costumeNotBought.SetActive(false);
             costumeBought.SetActive(true);
 
@@ -420,7 +420,7 @@ public class BuyCostume : MonoBehaviour
             playerCoin1 = playerCoin2.ToString();
             
             userName = UserName.GetComponent<TextMeshProUGUI>().text;
-            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
+            Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
 
             //For trophy unlocking.
             numberOfCostumes = Lines[3];
@@ -515,7 +515,7 @@ public class BuyCostume : MonoBehaviour
 
             }
             
-            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
+            System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
             costumeNotBought.SetActive(false);
             costumeBought.SetActive(true);
 
@@ -540,7 +540,7 @@ public class BuyCostume : MonoBehaviour
             playerCoin1 = playerCoin2.ToString();
             
             userName = UserName.GetComponent<TextMeshProUGUI>().text;
-            Lines = System.IO.File.ReadAllLines(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt");
+            Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
 
             //For trophy unlocking.
             numberOfCostumes = Lines[3];
@@ -635,7 +635,7 @@ public class BuyCostume : MonoBehaviour
 
             }
             
-            System.IO.File.WriteAllText(@"D:/Unity Projects/Sondaj_Bear/Users/"+userName+".txt",form);
+            System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
             costumeNotBought.SetActive(false);
             costumeBought.SetActive(true);
 
