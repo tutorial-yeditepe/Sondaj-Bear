@@ -5,6 +5,7 @@ using UnityEngine;
 public class SpawneeMovement : MonoBehaviour
 {
     public float speed = 5;  // Public for easy debugging.
+    public float point = 100;
     private int dir;
 
     void Start()
@@ -15,6 +16,8 @@ public class SpawneeMovement : MonoBehaviour
             dir = 1;
         else
             dir = -1;
+
+        AssignPoint();
     }
 
     void Update()
@@ -28,5 +31,17 @@ public class SpawneeMovement : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    void AssignPoint()
+    {
+        if (name == "1(Clone)")
+            point = 100;
+        else if (name == "2(Clone)")
+            point = 150;
+        else if (name == "FastHook(Clone)")
+            point = 50;
+        else if (name == "ScoreBoost(Clone)")
+            point = 50;
     }
 }
