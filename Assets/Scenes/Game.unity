@@ -449,6 +449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49afa374f5861d44871c52980a3bd0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userID: {fileID: 0}
 --- !u!1001 &157226067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3161,6 +3162,7 @@ GameObject:
   - component: {fileID: 1158833228}
   - component: {fileID: 1158833230}
   - component: {fileID: 1158833231}
+  - component: {fileID: 1158833232}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -3264,6 +3266,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AspectMode: 4
   m_AspectRatio: 0.001
+--- !u!114 &1158833232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158833226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841729c6ca9e8d44a951d8b18997ea67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgrounds:
+  - {fileID: 21300000, guid: a2e8df5a12424994889a54b605b80e19, type: 3}
+  - {fileID: 21300000, guid: 3e0e6453f4c7d83479e62c7b62ea6852, type: 3}
 --- !u!1 &1224760096
 GameObject:
   m_ObjectHideFlags: 0
@@ -3940,9 +3957,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnees:
-  - {fileID: 4698632748182076498, guid: 349d8403201a6464989f52e3bfe4bd07, type: 3}
-  - {fileID: 627659490232889366, guid: ebb48ffc99f07a94880e94535425e6da, type: 3}
-  - {fileID: 1374496167726533558, guid: dbfa7aaf33aefd74fa47d91784831386, type: 3}
+  - {fileID: 6267595340879733002, guid: 2ee1de8d10a32fe4494bfd8ec0604a72, type: 3}
+  - {fileID: 734123675615761104, guid: b0bfb1dbe95d854419e9e15295585b56, type: 3}
+  - {fileID: 1545290227119595787, guid: f709b0abedb29cf4cbf41b8f5bfd9943, type: 3}
+  - {fileID: 7677185590948222080, guid: e6cd83d80b6849341832c808ef685842, type: 3}
+  - {fileID: 1534163551259071439, guid: c20a4b0accb8b144ca07a7f83183613b, type: 3}
+  - {fileID: 3030124182486686995, guid: 42368ff5bb4cc6e4baa77ed3516e6be1, type: 3}
+  - {fileID: 9047452684770509525, guid: e00df6b8de592654c9edaf590b2d2972, type: 3}
+  - {fileID: 6999319219538618631, guid: f00e1bc516d02de40b787985d93d9c25, type: 3}
+  - {fileID: 1147719540688029907, guid: 1227da74ae98e464f83fef1fe263546f, type: 3}
+  - {fileID: 480050042293620153, guid: 4c079fbcf0b2c6d4187eb604e1fa64d6, type: 3}
   spawnSides:
   - {fileID: 1400126322}
   - {fileID: 868200989}

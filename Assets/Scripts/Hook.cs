@@ -17,6 +17,7 @@ public class Hook : MonoBehaviour
     public float duration = 1f;
     public float speed = 4f;
     private Vector2 startPoint;
+    private Transform originalPoint;
     RaycastHit2D hit;
     Vector2 ray;
     private float timeStartedLerping;
@@ -27,6 +28,7 @@ public class Hook : MonoBehaviour
         player = transform.parent.parent.parent.gameObject.GetComponent<PlayerStats>();
         speed = player.hookSpeed; // Get hookSpeed from PlayerStats.
 
+        originalPoint = gameObject.transform;
         startPoint = gameObject.transform.localPosition;
     }
 
@@ -155,6 +157,22 @@ public class Hook : MonoBehaviour
 
             caughtPowerUp = true;
         }
+        else if (other.tag == "Enemy")
+        {
+            GetComponent<BoxCollider2D>().enabled = false; // Disable the collider so it wont collide with other fish or powerup.
+                                                           // What if it's an enemy?
+                                                           //hookOn = false;
+            gameObject.GetComponent<SpriteRenderer>().enabled = false; // disable renderer so it will be invisible
+            player.health = player.health - 1; // lower health
+            StartCoroutine(waitHook()); // go on cooldown
+        }
+    }
+
+    IEnumerator waitHook()
+    {
+        yield return new WaitForSeconds(1.5f); // wait this seconds
+        gameObject.GetComponent<SpriteRenderer>().enabled = true; // enable renderer
+        GetComponent<BoxCollider2D>().enabled = true; // enable collider
     }
 
 }

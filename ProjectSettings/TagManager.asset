@@ -7,6 +7,7 @@ TagManager:
   - Spawnee
   - Fish
   - PowerUp
+  - Enemy
   layers:
   - Default
   - TransparentFX

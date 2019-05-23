@@ -90,5 +90,55 @@ public class SpawneeMovement : MonoBehaviour
             point = 10;
             speed = 5;
         }
+        else if (name == "d1(Clone)")
+        {
+            point = 0;
+            speed = 5;
+        }
+        else if (name == "d2(Clone)")
+        {
+            point = 0;
+            speed = 5;
+        }
+        else if (name == "d3(Clone)")
+        {
+            point = 0;
+            speed = 5;
+        }
+        else if (name == "d4(Clone)")
+        {
+            point = 0;
+            speed = 5;
+        }
+        else if (name == "d5(Clone)")
+        {
+            point = 0;
+            speed = 5;
+        }
+        else if (name == "d6(Clone)")
+        {
+            point = 0;
+            speed = 5;
+        }
+        else if (name == "d7(Clone)")
+        {
+            point = 0;
+            speed = 5;
+        }
+        else if (name == "d8(Clone)")
+        {
+            point = 0;
+            speed = 5;
+        }
+        else if (name == "d9(Clone)")
+        {
+            point = 0;
+            speed = 5;
+        }
+        else if (name == "d10(Clone)")
+        {
+            point = 0;
+            speed = 5;
+        }
     }
 }
