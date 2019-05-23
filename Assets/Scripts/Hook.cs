@@ -99,8 +99,8 @@ public class Hook : MonoBehaviour
         {
             caughtFish = false;
 
-            float point = fish.GetComponent<SpawneeMovement>().point;
-            player.totalPoint += (int) (point * player.scoreBoost);
+            float point = fish.GetComponent<SpawneeMovement>().point * player.scoreBoost;
+            player.UpdateScore(point);
 
             Destroy(fish);
             GetComponent<BoxCollider2D>().enabled = true; // Enable to catch other fish.
@@ -115,10 +115,9 @@ public class Hook : MonoBehaviour
         {
             caughtPowerUp = false;
 
-            float point = powerUp.GetComponent<SpawneeMovement>().point;
-            player.totalPoint += (int)(point * player.scoreBoost);
+            float point = powerUp.GetComponent<SpawneeMovement>().point * player.scoreBoost;
+            player.UpdateScore(point);
 
-            powerUp.GetComponent<SpawneeMovement>().enabled = false;
             powerUp.GetComponent<PowerUp>().ApplyPowerUp(powerUp.name);
 
             GetComponent<BoxCollider2D>().enabled = true; // Enable to catch other fish.
@@ -148,6 +147,7 @@ public class Hook : MonoBehaviour
         else if (other.tag == "PowerUp")
         {
             powerUp = other.gameObject;
+            powerUp.GetComponent<SpawneeMovement>().enabled = false;
 
             GetComponent<BoxCollider2D>().enabled = false; // Disable the collider so it wont collide with other fish or powerup.
                                                            // What if it's an enemy?

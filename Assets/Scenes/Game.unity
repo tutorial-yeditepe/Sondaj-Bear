@@ -226,6 +226,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a234e248d8458344c8f3eed11124d4ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 483599500}
+  healthHooks:
+  - {fileID: 1963546949}
+  - {fileID: 1575893149}
+  - {fileID: 35975613}
+  health: 4
   moveSpeed: 5
   scoreBoost: 1
   hookSpeed: 4
@@ -1508,7 +1514,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 20000
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fb1744c305e364342ab1fe55885afebe, type: 2}
   m_sharedMaterial: {fileID: -1919038286326362613, guid: fb1744c305e364342ab1fe55885afebe,
@@ -1578,7 +1584,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 483599500}
-    characterCount: 5
+    characterCount: 1
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -3342,6 +3348,8 @@ MonoBehaviour:
   - {fileID: 4698632748182076498, guid: 349d8403201a6464989f52e3bfe4bd07, type: 3}
   - {fileID: 627659490232889366, guid: ebb48ffc99f07a94880e94535425e6da, type: 3}
   - {fileID: 1374496167726533558, guid: dbfa7aaf33aefd74fa47d91784831386, type: 3}
+  - {fileID: 6267595340879733002, guid: 2ee1de8d10a32fe4494bfd8ec0604a72, type: 3}
+  - {fileID: 734123675615761104, guid: b0bfb1dbe95d854419e9e15295585b56, type: 3}
   spawnSides:
   - {fileID: 1400126322}
   - {fileID: 868200989}
