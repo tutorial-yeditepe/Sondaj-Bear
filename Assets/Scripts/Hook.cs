@@ -7,10 +7,12 @@ public class Hook : MonoBehaviour
     private PlayerStats player;
     private GameObject fish;
     private GameObject powerUp;
+    private GameObject obstacle;
 
     private bool caughtFish = false;
     private bool caughtPowerUp = false;
     private bool appliedPU = false;
+    private bool caughtObstacle = false;
 
     private bool flag = false;
     private Vector2 endPoint;
@@ -90,6 +92,10 @@ public class Hook : MonoBehaviour
         {
             CatchPowerUp();
         }
+        if(caughtObstacle)
+        {
+            CatchObstacle();
+        }
     }
 
     void CatchFish()
@@ -104,7 +110,7 @@ public class Hook : MonoBehaviour
             player.UpdateScore(point);
 
             Destroy(fish);
-            GetComponent<BoxCollider2D>().enabled = true; // Enable to catch other fish.
+            GetComponent<BoxCollider2D>().enabled = true; // Enable to catch other spawnees.
         }
     }
 
@@ -121,7 +127,21 @@ public class Hook : MonoBehaviour
 
             powerUp.GetComponent<PowerUp>().ApplyPowerUp(powerUp.name);
 
-            GetComponent<BoxCollider2D>().enabled = true; // Enable to catch other fish.
+            GetComponent<BoxCollider2D>().enabled = true; // Enable to catch other spawnees.
+        }
+    }
+
+    void CatchObstacle()
+    {
+        obstacle.transform.position = transform.position - new Vector3(10, 40, 0);
+
+        if (transform.localPosition.y > -5)
+        {
+            caughtObstacle = false;
+
+            GetComponent<BoxCollider2D>().enabled = true; // Enable to catch other spawnees.
+
+            Destroy(obstacle);
         }
     }
 
@@ -154,6 +174,13 @@ public class Hook : MonoBehaviour
                                                            // What if it's an enemy?
 
             caughtPowerUp = true;
+        }
+        else if(other.tag == "Obstacle")
+        {
+            obstacle = other.gameObject;
+
+            GetComponent<BoxCollider2D>().enabled = false;
+            caughtObstacle = true;
         }
     }
 
