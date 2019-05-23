@@ -111,6 +111,9 @@ public class Hook : MonoBehaviour
             float point = fish.GetComponent<SpawneeMovement>().point * player.scoreBoost;
             player.UpdateScore(point);
 
+            float coin = fish.GetComponent<SpawneeMovement>().coin;
+            player.UpdateCoins(coin);
+
             Destroy(fish);
             GetComponent<BoxCollider2D>().enabled = true; // Enable to catch other spawnees.
         }
@@ -126,6 +129,9 @@ public class Hook : MonoBehaviour
 
             float point = powerUp.GetComponent<SpawneeMovement>().point * player.scoreBoost;
             player.UpdateScore(point);
+
+            float coin = powerUp.GetComponent<SpawneeMovement>().coin;
+            player.UpdateCoins(coin);
 
             powerUp.GetComponent<PowerUp>().ApplyPowerUp(powerUp.name);
 

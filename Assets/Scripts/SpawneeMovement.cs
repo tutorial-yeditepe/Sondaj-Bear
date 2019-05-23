@@ -6,7 +6,7 @@ public class SpawneeMovement : MonoBehaviour
 {
     public float speed = 5;  // Public for easy debugging.
     public float point = 100;
-    public float coin = 5;
+    public float coin = 0;
 
     private int dir;
 
@@ -41,56 +41,67 @@ public class SpawneeMovement : MonoBehaviour
         {
             point = 5;
             speed = 5;
+            coin = 5;
         }
         else if (name == "2(Clone)")
         {
             point = 10;
             speed = 5;
+            coin = 5;
         }
         else if (name == "3(Clone)")
         {
             point = 10;
             speed = 5;
+            coin = 5;
         }
         else if (name == "4(Clone)")
         {
             point = 10;
             speed = 5;
+            coin = 5;
         }
         else if (name == "5(Clone)")
         {
             point = 10;
             speed = 5;
+            coin = 5;
         }
         else if (name == "6(Clone)")
         {
             point = 10;
             speed = 5;
+            coin = 5;
         }
         else if (name == "7(Clone)")
         {
             point = 10;
             speed = 5;
+            coin = 5;
         }
         else if (name == "8(Clone)")
         {
             point = 10;
             speed = 5;
+            coin = 5;
         }
         else if (name == "FastHook(Clone)")
         {
             point = 10;
             speed = 5;
+            coin = 5;
         }
         else if (name == "ScoreBoost(Clone)")
         {
             point = 10;
             speed = 5;
+            coin = 5;
         }
         else if (name == "SpeedUp(Clone)")
         {
             point = 10;
             speed = 5;
+            coin = 5;
         }
         else if (name == "d1(Clone)")
         {

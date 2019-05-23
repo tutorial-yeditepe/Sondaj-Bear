@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI coinText;
 
     public IconPanelScript iconPanel;
     public Sprite[] costumes;
@@ -16,6 +17,7 @@ public class PlayerStats : MonoBehaviour
     public int maxHealth = 4;
 
     private string playerName;
+    private float coins;
 
     [SerializeField] [Range(1.0f, 10.0f)] public float moveSpeed = 5.0f;
     public float scoreBoost = 1;  // Point multiplier.
@@ -25,11 +27,23 @@ public class PlayerStats : MonoBehaviour
 
     private void Start()
     {
-        scoreText.text = totalPoint.ToString(); // Initiate score area.
+        scoreText.text = totalPoint.ToString(); // Initialize score text.
+
+        coins = float.Parse(StaticVariables.coins);
+        coinText.text = coins.ToString();       // Initialize coin text.
+
         health = maxHealth;                     // Initialize current health as max health.
 
         string costume = StaticVariables.costume;
         bear.GetComponent<SpriteRenderer>().sprite = costumes[int.Parse(costume)];
+
+        
+    }
+
+    public void UpdateCoins(float coin)
+    {
+        coins += coin;
+        coinText.text = coins.ToString();
     }
 
     public void UpdateScore(float point)
