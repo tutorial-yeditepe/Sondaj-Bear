@@ -3857,6 +3857,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pop Up
       objectReference: {fileID: 0}
+    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8422322124728799956, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4011,11 +4016,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cc0d854ea67bfa4db493319783e7704, type: 3}
@@ -10409,6 +10409,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pop Up
       objectReference: {fileID: 0}
+    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8422322124728799956, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10588,11 +10593,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cc0d854ea67bfa4db493319783e7704, type: 3}
@@ -14708,6 +14708,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pop Up
       objectReference: {fileID: 0}
+    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8422322124728799956, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14863,11 +14868,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cc0d854ea67bfa4db493319783e7704, type: 3}
 --- !u!224 &1093897775 stripped
@@ -14887,6 +14887,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Pop Up
+      objectReference: {fileID: 0}
+    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8422322124728799956, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
@@ -15042,11 +15047,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cc0d854ea67bfa4db493319783e7704, type: 3}
@@ -18120,6 +18120,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SignOutPopUp
       objectReference: {fileID: 0}
+    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
+        type: 3}
+      propertyPath: m_Name
+      value: NoButton
+      objectReference: {fileID: 0}
     - target: {fileID: 8422322124728799956, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18274,11 +18279,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
-        type: 3}
-      propertyPath: m_Name
-      value: NoButton
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cc0d854ea67bfa4db493319783e7704, type: 3}
@@ -19391,7 +19391,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.19607843}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -23547,6 +23547,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pop Up
       objectReference: {fileID: 0}
+    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8422322124728799956, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23701,11 +23706,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2cc0d854ea67bfa4db493319783e7704, type: 3}
