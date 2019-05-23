@@ -81,6 +81,17 @@ public class HighScores : MonoBehaviour
             
             form = "--"  + Environment.NewLine + "--"  + Environment.NewLine + "--"  + Environment.NewLine + "--"  + Environment.NewLine + "--" + Environment.NewLine + "--"  + Environment.NewLine + "--"  + Environment.NewLine + "--"  + Environment.NewLine + "--";
             System.IO.File.WriteAllText(Application.persistentDataPath+"/highscores.txt",form);
+
+            FirstPlace.GetComponent<TextMeshProUGUI>().text = "--";
+            FirstPlaceScore.GetComponent<TextMeshProUGUI>().text = "--";
+            SecondPlace.GetComponent<TextMeshProUGUI>().text = "--";
+            SecondPlaceScore.GetComponent<TextMeshProUGUI>().text = "--";
+            ThirdPlace.GetComponent<TextMeshProUGUI>().text = "--";
+            ThirdPlaceScore.GetComponent<TextMeshProUGUI>().text = "--";
+            FourthPlace.GetComponent<TextMeshProUGUI>().text = "--";
+            FourthPlaceScore.GetComponent<TextMeshProUGUI>().text = "--";
+            FifthPlace.GetComponent<TextMeshProUGUI>().text = "--";
+            FifthPlaceScore.GetComponent<TextMeshProUGUI>().text = "--";
             
         }
         

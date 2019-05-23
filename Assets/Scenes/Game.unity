@@ -1948,6 +1948,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pop Up
       objectReference: {fileID: 0}
+    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
+        type: 3}
+      propertyPath: m_Name
+      value: ContinueButton
+      objectReference: {fileID: 0}
     - target: {fileID: 8422322124728799956, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2162,11 +2167,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1913972893701187208, guid: 2cc0d854ea67bfa4db493319783e7704,
-        type: 3}
-      propertyPath: m_Name
-      value: ContinueButton
       objectReference: {fileID: 0}
     - target: {fileID: 8926486239437657369, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
@@ -2890,7 +2890,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.014892578, y: -227.29486}
+  m_Offset: {x: -0.014892578, y: -183.89243}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2901,7 +2901,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1919.8193, y: 624.3429}
+  m_Size: {x: 1919.8193, y: 537.538}
   m_EdgeRadius: 0
 --- !u!114 &1158833231
 MonoBehaviour:
