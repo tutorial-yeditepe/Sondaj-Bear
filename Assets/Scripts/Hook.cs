@@ -183,7 +183,8 @@ public class Hook : MonoBehaviour
                                                            // What if it's an enemy?
                                                            //hookOn = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = false; // disable renderer so it will be invisible
-            player.health = player.health - 1; // lower health
+
+            player.UpdateHealth(-1);
             StartCoroutine(waitHook()); // go on cooldown
         }
         else if (other.tag == "Obstacle")

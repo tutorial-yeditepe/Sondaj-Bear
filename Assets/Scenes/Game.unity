@@ -238,9 +238,6 @@ MonoBehaviour:
   bear: {fileID: 592773267}
   health: 4
   maxHealth: 4
-  playerName: 
-  costume: 
-  coin: 
   moveSpeed: 5
   scoreBoost: 1
   hookSpeed: 4
@@ -1673,7 +1670,10 @@ MonoBehaviour:
   - {fileID: 1834788879}
   - {fileID: 740593140}
   - {fileID: 1025199080}
-  healthImgs: []
+  healthImgs:
+  - {fileID: 1963546949}
+  - {fileID: 1575893149}
+  - {fileID: 35975613}
   player: {fileID: 22032585}
 --- !u!1 &483599498
 GameObject:
