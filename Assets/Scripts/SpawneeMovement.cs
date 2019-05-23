@@ -6,6 +6,8 @@ public class SpawneeMovement : MonoBehaviour
 {
     public float speed = 5;  // Public for easy debugging.
     public float point = 100;
+    public float coin = 5;
+
     private int dir;
 
     void Start()
@@ -136,6 +138,11 @@ public class SpawneeMovement : MonoBehaviour
             speed = 5;
         }
         else if (name == "d10(Clone)")
+        {
+            point = 0;
+            speed = 5;
+        }
+        else if(tag == "Obstacle")
         {
             point = 0;
             speed = 5;

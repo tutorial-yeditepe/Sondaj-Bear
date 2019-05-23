@@ -27,6 +27,7 @@ public class EquipCostume : MonoBehaviour
     private String[] Lines;
     private string userName;
     private string form;
+    public StaticVariables information;
 
     //Line checking as follows: 
     //password / coin / currentCostume / #ofcostumes /costume1 / costume2 / costume3 / costume4 / costume5 / trophy1 / trophy2 / trophy3 / trophy4 / trophy5 / trophy6 / numberOfCatchFish
@@ -34,6 +35,11 @@ public class EquipCostume : MonoBehaviour
     //These EquipOperations basically does:
     //Collect user data then change necessary images.
     //Update the currentCostume part at the .txt file.
+
+    public void updateTheInfo() {
+
+        information.changeUserLogged();
+    }
 
     public void EquipOperation0() {
 
@@ -68,6 +74,7 @@ public class EquipCostume : MonoBehaviour
         costumeSprite = costumeImage.GetComponent<Image>().sprite;
         characterSprite = costumeSprite;
         characterImage.GetComponent<Image>().sprite = characterSprite;
+        updateTheInfo();
     }
 
     public void EquipOperation1() {
@@ -103,6 +110,7 @@ public class EquipCostume : MonoBehaviour
         costumeSprite = costumeImage.GetComponent<Image>().sprite;
         characterSprite = costumeSprite;
         characterImage.GetComponent<Image>().sprite = characterSprite;
+        updateTheInfo();
     }
 
     public void EquipOperation2() {
@@ -138,6 +146,7 @@ public class EquipCostume : MonoBehaviour
         costumeSprite = costumeImage.GetComponent<Image>().sprite;
         characterSprite = costumeSprite;
         characterImage.GetComponent<Image>().sprite = characterSprite;
+        updateTheInfo();
     }
 
     public void EquipOperation3() {
@@ -173,6 +182,7 @@ public class EquipCostume : MonoBehaviour
         costumeSprite = costumeImage.GetComponent<Image>().sprite;
         characterSprite = costumeSprite;
         characterImage.GetComponent<Image>().sprite = characterSprite;
+        updateTheInfo();
     }
 
     public void EquipOperation4() {
@@ -208,6 +218,7 @@ public class EquipCostume : MonoBehaviour
         costumeSprite = costumeImage.GetComponent<Image>().sprite;
         characterSprite = costumeSprite;
         characterImage.GetComponent<Image>().sprite = characterSprite;
+        updateTheInfo();
     }
 
     public void EquipOperation5() {
@@ -243,5 +254,6 @@ public class EquipCostume : MonoBehaviour
         costumeSprite = costumeImage.GetComponent<Image>().sprite;
         characterSprite = costumeSprite;
         characterImage.GetComponent<Image>().sprite = characterSprite;
+        updateTheInfo();
     }
 }

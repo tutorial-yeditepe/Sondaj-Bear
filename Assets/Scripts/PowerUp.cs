@@ -6,15 +6,10 @@ using UnityEngine.UI;
 public class PowerUp : MonoBehaviour
 {
     private PlayerStats player;
-    private Image img;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player").GetComponent<PlayerStats>();
-
-        img = transform.parent.GetComponentInChildren<Image>();
-
-        Debug.Log(img);
     }
 
     public void ApplyPowerUp(string name) {
@@ -33,28 +28,30 @@ public class PowerUp : MonoBehaviour
 
         GetComponent<BoxCollider2D>().enabled = false;
 
-        transform.position = new Vector3(1000, 1000, 0);
+        transform.position = new Vector3(1000, 1000, 0); // A bad way to get power up of our sight.
+                                                         // Somehow disabling the image creates a bug.
 
-        player.UpdatePowerUp(name, 1);
+        player.UpdatePowerUp(name, 1);            // 1 = Enable power up.
         yield return new WaitForSeconds(5);
         player.moveSpeed -= player.moveSpeed / 3; // Unapply the powerup.
-        player.UpdatePowerUp(name, -1);
+        player.UpdatePowerUp(name, -1);           // -1 = Disable power up.s
 
         Destroy(gameObject);
     }
 
     IEnumerator ScoreBoost()
     {
-        player.scoreBoost *= (float)1.5;
+        player.scoreBoost *= (float)2;
 
         GetComponent<BoxCollider2D>().enabled = false;
 
-        transform.position = new Vector3(1000, 1000, 0);
+        transform.position = new Vector3(1000, 1000, 0); // A bad way to get power up of our sight.
+                                                         // Somehow disabling the image creates a bug.
 
-        player.UpdatePowerUp(name, 1);
+        player.UpdatePowerUp(name, 1);   // 1 = Enable power up.
         yield return new WaitForSeconds(5);
-        player.scoreBoost -= player.scoreBoost / 11; // Unapply the powerup.
-        player.UpdatePowerUp(name, -1);
+        player.scoreBoost = player.scoreBoost / 2; // Unapply the powerup.
+        player.UpdatePowerUp(name, -1);  // -1 = Disable power up.
 
         Destroy(gameObject);
     }
@@ -65,12 +62,13 @@ public class PowerUp : MonoBehaviour
 
         GetComponent<BoxCollider2D>().enabled = false;
 
-        transform.position = new Vector3(1000, 1000, 0);
+        transform.position = new Vector3(1000, 1000, 0); // A bad way to get power up of our sight.
+                                                         // Somehow disabling the image creates a bug.
 
-        player.UpdatePowerUp(name, 1);
+        player.UpdatePowerUp(name, 1);            // 1 = Enable power up.
         yield return new WaitForSecondsRealtime(5);
         player.hookSpeed -= player.hookSpeed / 3; // Unapply the powerup.
-        player.UpdatePowerUp(name, -1);
+        player.UpdatePowerUp(name, -1);           // -1 = Disable power up.
 
         Destroy(gameObject);
     }
