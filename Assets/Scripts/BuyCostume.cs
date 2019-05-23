@@ -38,7 +38,7 @@ public class BuyCostume : MonoBehaviour
     private string form;
 
     //Line checking as follows: 
-    //password / coin / currentCostume / #ofcostumes /costume1 / costume2 / costume3 / costume4 / costume5 / trophy1 / trophy2 / trophy3 / trophy4 / trophy5 / trophy6 /
+    //password / coin / currentCostume / #ofcostumes /costume1 / costume2 / costume3 / costume4 / costume5 / trophy1 / trophy2 / trophy3 / trophy4 / trophy5 / trophy6 / numberOfCatchFish
 
     //These BuyOperation methods basically does:
     //Check if coin is enough to buy.
@@ -65,7 +65,6 @@ public class BuyCostume : MonoBehaviour
             numberOfCostumes = Lines[3];
             numberOfCostumesTrophy = Int32.Parse(numberOfCostumes);
             numberOfCostumesTrophy = numberOfCostumesTrophy + 1;
-            Debug.Log(numberOfCostumesTrophy);
 
             if(numberOfCostumesTrophy == 1) {      //Unlock trophyCostume1 
 
@@ -84,7 +83,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume1.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -106,7 +106,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume2.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -128,7 +129,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + "1" 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume3.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -150,7 +152,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
             }
             
@@ -186,7 +189,6 @@ public class BuyCostume : MonoBehaviour
             numberOfCostumes = Lines[3];
             numberOfCostumesTrophy = Int32.Parse(numberOfCostumes);
             numberOfCostumesTrophy = numberOfCostumesTrophy + 1;
-            Debug.Log(numberOfCostumesTrophy);
 
             if(numberOfCostumesTrophy == 1) {      //Unlock trophyCostume1 
 
@@ -205,7 +207,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume1.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -227,7 +230,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume2.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -249,7 +253,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + "1" 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume3.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -271,7 +276,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
             }
             
@@ -306,7 +312,6 @@ public class BuyCostume : MonoBehaviour
             numberOfCostumes = Lines[3];
             numberOfCostumesTrophy = Int32.Parse(numberOfCostumes);
             numberOfCostumesTrophy = numberOfCostumesTrophy + 1;
-            Debug.Log(numberOfCostumesTrophy);
 
             if(numberOfCostumesTrophy == 1) {      //Unlock trophyCostume1 
 
@@ -325,7 +330,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume1.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -347,7 +353,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume2.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -369,7 +376,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + "1" 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume3.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -391,7 +399,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
             }
             
@@ -426,7 +435,6 @@ public class BuyCostume : MonoBehaviour
             numberOfCostumes = Lines[3];
             numberOfCostumesTrophy = Int32.Parse(numberOfCostumes);
             numberOfCostumesTrophy = numberOfCostumesTrophy + 1;
-            Debug.Log(numberOfCostumesTrophy);
 
             if(numberOfCostumesTrophy == 1) {      //Unlock trophyCostume1 
 
@@ -445,7 +453,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume1.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -467,7 +476,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume2.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -489,7 +499,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + "1" 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume3.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -511,7 +522,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
             }
             
@@ -546,7 +558,6 @@ public class BuyCostume : MonoBehaviour
             numberOfCostumes = Lines[3];
             numberOfCostumesTrophy = Int32.Parse(numberOfCostumes);
             numberOfCostumesTrophy = numberOfCostumesTrophy + 1;
-            Debug.Log(numberOfCostumesTrophy);
 
             if(numberOfCostumesTrophy == 1) {      //Unlock trophyCostume1 
 
@@ -565,7 +576,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume1.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -587,7 +599,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume2.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -609,7 +622,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + "1" 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
                 trophyCostume3.SetActive(true);
                 trophyMessagePanel.SetActive(true);
@@ -631,7 +645,8 @@ public class BuyCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
             }
             

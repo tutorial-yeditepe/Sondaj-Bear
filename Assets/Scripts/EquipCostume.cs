@@ -29,7 +29,7 @@ public class EquipCostume : MonoBehaviour
     private string form;
 
     //Line checking as follows: 
-    //password / coin / currentCostume / #ofcostumes /costume1 / costume2 / costume3 / costume4 / costume5 / trophy1 / trophy2 / trophy3 / trophy4 / trophy5 / trophy6 /
+    //password / coin / currentCostume / #ofcostumes /costume1 / costume2 / costume3 / costume4 / costume5 / trophy1 / trophy2 / trophy3 / trophy4 / trophy5 / trophy6 / numberOfCatchFish
 
     //These EquipOperations basically does:
     //Collect user data then change necessary images.
@@ -54,7 +54,8 @@ public class EquipCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
         System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
 
@@ -88,7 +89,8 @@ public class EquipCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
         System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
 
@@ -122,7 +124,8 @@ public class EquipCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
         System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
 
@@ -156,7 +159,8 @@ public class EquipCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
         
         System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
 
@@ -190,7 +194,8 @@ public class EquipCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
         
         System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
 
@@ -224,7 +229,8 @@ public class EquipCostume : MonoBehaviour
                 + Environment.NewLine + Lines[11] 
                 + Environment.NewLine + Lines[12] 
                 + Environment.NewLine + Lines[13] 
-                + Environment.NewLine + Lines[14];
+                + Environment.NewLine + Lines[14]
+                + Environment.NewLine + Lines[15];
 
         System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
 

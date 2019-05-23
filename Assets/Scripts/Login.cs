@@ -20,6 +20,8 @@ public class Login : MonoBehaviour
     public GameObject playGuestButton;
     public GameObject playButton;
 
+    public GameObject GameCanvas;
+
     //Costume variables.
     public GameObject playerCoins;
     public GameObject costume1NotBought;
@@ -270,11 +272,13 @@ public class Login : MonoBehaviour
             }else {
                 trophy6.SetActive(false);
             }
-            successPopUp.SetActive(true);
+
             changedUsername.GetComponent<TextMeshProUGUI>().text = Username;
             playerCoins.GetComponent<TextMeshProUGUI>().text = Coins;
             playGuestButton.SetActive(false);
             playButton.SetActive(true);
+            GameCanvas.GetComponent<StaticVariables>().changeUserLogged();
+            successPopUp.SetActive(true);
             cleaner();
         }
     }

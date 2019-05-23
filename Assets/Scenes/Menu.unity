@@ -12894,6 +12894,7 @@ MonoBehaviour:
   changedUsername: {fileID: 708613800}
   playGuestButton: {fileID: 1727191905}
   playButton: {fileID: 2001239085}
+  GameCanvas: {fileID: 2104957897}
   playerCoins: {fileID: 145625172}
   costume1NotBought: {fileID: 943056083}
   costume2NotBought: {fileID: 1320237961}
@@ -27233,6 +27234,7 @@ GameObject:
   - component: {fileID: 2104957898}
   - component: {fileID: 2104957902}
   - component: {fileID: 2104957903}
+  - component: {fileID: 2104957904}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -27368,6 +27370,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f59903589736ad547b4f9c5fcd30a369, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2104957904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104957897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b49afa374f5861d44871c52980a3bd0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  userID: {fileID: 708613800}
 --- !u!1 &2114382656
 GameObject:
   m_ObjectHideFlags: 0
