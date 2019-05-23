@@ -7,9 +7,14 @@ using UnityEngine.UI;
 public class PlayerStats : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
-    public Image[] healthHooks;
+    public IconPanelScript iconPanel;
+
     public int health;
-    private int maxHealth = 4;
+    public int maxHealth = 4;
+
+    public string name;
+    public string costume;
+    public string coin;
 
     [SerializeField] [Range(1.0f, 10.0f)] public float moveSpeed = 5.0f;
     public float scoreBoost = 1;  // Point multiplier.
@@ -21,12 +26,7 @@ public class PlayerStats : MonoBehaviour
     {
         scoreText.text = totalPoint.ToString();
 
-        health = 3;
-    }
-
-    private void Update()
-    {
-        UpdateHealth();
+        health = 4;
     }
 
     public void UpdateScore(float point)
@@ -35,18 +35,14 @@ public class PlayerStats : MonoBehaviour
         scoreText.text = totalPoint.ToString();
     }
 
-    public void UpdateHealth()
+    public void UpdateHealth(int change)
     {
-        for (int i = 0; i < maxHealth-1; i++)
-        {
-            if (i < health-1)
-            {
-                healthHooks[i].enabled = true;
-            }
-            else
-            {
-                healthHooks[i].enabled = false;
-            }
-        }
+        health += change;
+        iconPanel.UpdateHealthImg();
+    }
+
+    public void UpdatePowerUp(string name, int val)
+    {
+        iconPanel.UpdatePowerUpImg(name, val);
     }
 }

@@ -1,14 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PowerUp : MonoBehaviour
 {
-    private GameObject player;
+    private PlayerStats player;
+    private Image img;
 
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
+        player = GameObject.FindWithTag("Player").GetComponent<PlayerStats>();
+
+        img = transform.parent.GetComponentInChildren<Image>();
+
+        Debug.Log(img);
     }
 
     public void ApplyPowerUp(string name) {
@@ -23,34 +29,48 @@ public class PowerUp : MonoBehaviour
 
     IEnumerator SpeedUp()
     {
-        player.GetComponent<PlayerStats>().moveSpeed *= (float)1.5;
+        player.moveSpeed *= (float)1.5;
 
-        transform.position = new Vector3(-1000, -1000, -1000); // Get it out of our sight.
+        GetComponent<BoxCollider2D>().enabled = false;
+
+        transform.position = new Vector3(1000, 1000, 0);
+
+        player.UpdatePowerUp(name, 1);
         yield return new WaitForSeconds(5);
-        player.GetComponent<PlayerStats>().moveSpeed -= player.GetComponent<PlayerStats>().moveSpeed / 3; // Unapply the powerup.
+        player.moveSpeed -= player.moveSpeed / 3; // Unapply the powerup.
+        player.UpdatePowerUp(name, -1);
 
         Destroy(gameObject);
     }
 
     IEnumerator ScoreBoost()
     {
-        player.GetComponent<PlayerStats>().scoreBoost *= (float)1.5;
+        player.scoreBoost *= (float)1.5;
 
-        transform.position = new Vector3(-1000, -1000, -1000); // Get it out of our sight.
+        GetComponent<BoxCollider2D>().enabled = false;
+
+        transform.position = new Vector3(1000, 1000, 0);
+
+        player.UpdatePowerUp(name, 1);
         yield return new WaitForSeconds(5);
-     
-        player.GetComponent<PlayerStats>().scoreBoost -= player.GetComponent<PlayerStats>().scoreBoost / 11; // Unapply the powerup.
-        
+        player.scoreBoost -= player.scoreBoost / 11; // Unapply the powerup.
+        player.UpdatePowerUp(name, -1);
+
         Destroy(gameObject);
     }
 
     IEnumerator FastHook()
     {
-        player.GetComponent<PlayerStats>().hookSpeed *= (float)1.5;
+        player.hookSpeed *= (float)1.5;
 
-        transform.position = new Vector3(-1000, -1000, -1000); // Get it out of our sight.
+        GetComponent<BoxCollider2D>().enabled = false;
+
+        transform.position = new Vector3(1000, 1000, 0);
+
+        player.UpdatePowerUp(name, 1);
         yield return new WaitForSecondsRealtime(5);
-        player.GetComponent<PlayerStats>().hookSpeed -= player.GetComponent<PlayerStats>().hookSpeed / 3; // Unapply the powerup.
+        player.hookSpeed -= player.hookSpeed / 3; // Unapply the powerup.
+        player.UpdatePowerUp(name, -1);
 
         Destroy(gameObject);
     }

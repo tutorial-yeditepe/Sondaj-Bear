@@ -10,6 +10,7 @@ public class Hook : MonoBehaviour
 
     private bool caughtFish = false;
     private bool caughtPowerUp = false;
+    private bool appliedPU = false;
 
     private bool flag = false;
     private Vector2 endPoint;
