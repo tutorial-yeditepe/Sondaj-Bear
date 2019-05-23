@@ -29,7 +29,7 @@ public class Spawner : MonoBehaviour
         Transform t = ((GameObject)Instantiate(spawnees[prefab], spawnPos, spawnRot, spawnSides[side].transform)).transform;
         //t.SetParent(spawnSides[side].transform, false);
 
-        if (side == 0)
+        if (side == 0 && spawnees[prefab].tag != "PowerUp")
         {
             Vector3 reverse = t.localScale;
             reverse.x = reverse.x * -1;
