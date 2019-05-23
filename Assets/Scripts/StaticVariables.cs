@@ -35,7 +35,6 @@ public class StaticVariables : MonoBehaviour
     }
 
     public void changeUserSignOut() {
-
         userName = "guest";
         coins = "0";
         costume = "0";

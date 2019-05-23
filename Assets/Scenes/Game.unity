@@ -228,9 +228,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 483599500}
   iconPanel: {fileID: 460175075}
+  costumes:
+  - {fileID: 21300000, guid: aeb493c40b632744e9c3287468d35a6b, type: 3}
+  - {fileID: 21300000, guid: f37cea66cf5403a47b117b60603ee0a6, type: 3}
+  - {fileID: 21300000, guid: 1d5b416251e15bb409caa7d743971505, type: 3}
+  - {fileID: 21300000, guid: ecebe0152c3365d45a9218be997f5b95, type: 3}
+  - {fileID: 21300000, guid: fe2489966fe95644fbadc43e1ba3dd62, type: 3}
+  - {fileID: 21300000, guid: 13603c51be450cc4d8ab75f2110029fd, type: 3}
+  bear: {fileID: 592773267}
   health: 4
   maxHealth: 4
-  name: 
+  playerName: 
   costume: 
   coin: 
   moveSpeed: 5
@@ -449,6 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49afa374f5861d44871c52980a3bd0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userID: {fileID: 0}
 --- !u!1001 &157226067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3940,6 +3949,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnees:
+  - {fileID: 4921659399759630073, guid: 694455bedbb74574cb39cd76d3f73947, type: 3}
+  - {fileID: 9094693165662353569, guid: b70b033bba863ee48bbf467fa61b370f, type: 3}
+  - {fileID: 3169356450432422503, guid: 9335fd8912d2d11439cd263449d9c9c4, type: 3}
+  - {fileID: 8090529326724059076, guid: c559aadfafa80aa4b9f93e0d43193094, type: 3}
+  - {fileID: 895926388235219212, guid: 1882e603b7f4e9e41b16a97c0c5f879e, type: 3}
+  - {fileID: 6267595340879733002, guid: 2ee1de8d10a32fe4494bfd8ec0604a72, type: 3}
+  - {fileID: 734123675615761104, guid: b0bfb1dbe95d854419e9e15295585b56, type: 3}
+  - {fileID: 1545290227119595787, guid: f709b0abedb29cf4cbf41b8f5bfd9943, type: 3}
+  - {fileID: 7677185590948222080, guid: e6cd83d80b6849341832c808ef685842, type: 3}
+  - {fileID: 1534163551259071439, guid: c20a4b0accb8b144ca07a7f83183613b, type: 3}
+  - {fileID: 3030124182486686995, guid: 42368ff5bb4cc6e4baa77ed3516e6be1, type: 3}
+  - {fileID: 9047452684770509525, guid: e00df6b8de592654c9edaf590b2d2972, type: 3}
+  - {fileID: 6999319219538618631, guid: f00e1bc516d02de40b787985d93d9c25, type: 3}
   - {fileID: 4698632748182076498, guid: 349d8403201a6464989f52e3bfe4bd07, type: 3}
   - {fileID: 627659490232889366, guid: ebb48ffc99f07a94880e94535425e6da, type: 3}
   - {fileID: 1374496167726533558, guid: dbfa7aaf33aefd74fa47d91784831386, type: 3}
