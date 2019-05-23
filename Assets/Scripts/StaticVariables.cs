@@ -11,6 +11,11 @@ public class StaticVariables : MonoBehaviour
     public GameObject userID;
     private String[] Lines;
     
+    public Login LoginWindow;
+
+    static public string userLogged = "0";
+    static public string sceneIndex = "0";
+
     static public string userName = "guest";
     static public string coins = "0";
     static public string costume = "0";
@@ -23,6 +28,7 @@ public class StaticVariables : MonoBehaviour
         coins = Lines[1];
         costume = Lines[2];
         numberOfFish = Lines[15];
+        userLogged = "1";
         Debug.Log(userName);
         Debug.Log(coins);
         Debug.Log(costume);
@@ -31,7 +37,14 @@ public class StaticVariables : MonoBehaviour
 
     public void changeUserUpdate() {
 
-
+        if(sceneIndex == "0") {
+            sceneIndex = "1";
+            Debug.Log(sceneIndex);
+        }else {
+            sceneIndex = "0";
+            Debug.Log(sceneIndex);
+        }
+                
     }
 
     public void changeUserSignOut() {
@@ -40,5 +53,18 @@ public class StaticVariables : MonoBehaviour
         coins = "0";
         costume = "0";
         numberOfFish = "0";
+        userLogged = "0";
+    }
+
+    void Start() {
+
+        if(userLogged == "1" && sceneIndex == "0") {
+        
+            LoginWindow.LoginUpdate(userName,coins);
+            Debug.Log(sceneIndex);
+
+        }
+        Debug.Log(sceneIndex);
+        
     }
 }

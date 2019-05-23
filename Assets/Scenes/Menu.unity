@@ -1352,6 +1352,7 @@ MonoBehaviour:
   Profile3: {fileID: 602764959}
   Profile4: {fileID: 771565208}
   Profile5: {fileID: 983196344}
+  information: {fileID: 0}
 --- !u!114 &123717648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8551,6 +8552,7 @@ MonoBehaviour:
   Profile3: {fileID: 602764959}
   Profile4: {fileID: 771565208}
   Profile5: {fileID: 983196344}
+  information: {fileID: 2104957904}
 --- !u!1 &680472067
 GameObject:
   m_ObjectHideFlags: 0
@@ -12392,6 +12394,7 @@ MonoBehaviour:
   trophyCostume1: {fileID: 1964932846}
   trophyCostume2: {fileID: 1779402955}
   trophyCostume3: {fileID: 742195248}
+  information: {fileID: 2104957904}
 --- !u!224 &945622743 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8422322124728799956, guid: 2cc0d854ea67bfa4db493319783e7704,
@@ -12894,6 +12897,11 @@ MonoBehaviour:
   changedUsername: {fileID: 708613800}
   playGuestButton: {fileID: 1727191905}
   playButton: {fileID: 2001239085}
+  loginButton: {fileID: 901609906}
+  signUpButton: {fileID: 819901023}
+  userNameText: {fileID: 388005357}
+  guestPicture: {fileID: 2114382656}
+  userPicture: {fileID: 1089365454}
   GameCanvas: {fileID: 2104957897}
   playerCoins: {fileID: 145625172}
   costume1NotBought: {fileID: 943056083}
@@ -13185,6 +13193,7 @@ MonoBehaviour:
   Profile3: {fileID: 602764959}
   Profile4: {fileID: 771565208}
   Profile5: {fileID: 983196344}
+  information: {fileID: 2104957904}
 --- !u!1 &1012522352
 GameObject:
   m_ObjectHideFlags: 0
@@ -13718,6 +13727,7 @@ MonoBehaviour:
   Profile3: {fileID: 602764959}
   Profile4: {fileID: 771565208}
   Profile5: {fileID: 983196344}
+  information: {fileID: 2104957904}
 --- !u!1 &1036529176
 GameObject:
   m_ObjectHideFlags: 0
@@ -15776,6 +15786,17 @@ MonoBehaviour:
           m_StringArgument: Game
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2104957904}
+        m_MethodName: changeUserUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1163570209
@@ -16738,6 +16759,7 @@ MonoBehaviour:
   trophyCostume1: {fileID: 1964932846}
   trophyCostume2: {fileID: 1779402955}
   trophyCostume3: {fileID: 742195248}
+  information: {fileID: 2104957904}
 --- !u!114 &1305448215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17200,6 +17222,7 @@ MonoBehaviour:
   trophyCostume1: {fileID: 1964932846}
   trophyCostume2: {fileID: 1779402955}
   trophyCostume3: {fileID: 742195248}
+  information: {fileID: 2104957904}
 --- !u!114 &1320237964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21762,6 +21785,7 @@ MonoBehaviour:
   trophyCostume1: {fileID: 1964932846}
   trophyCostume2: {fileID: 1779402955}
   trophyCostume3: {fileID: 742195248}
+  information: {fileID: 2104957904}
 --- !u!114 &1711742982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24940,6 +24964,7 @@ MonoBehaviour:
   Profile3: {fileID: 602764959}
   Profile4: {fileID: 771565208}
   Profile5: {fileID: 983196344}
+  information: {fileID: 2104957904}
 --- !u!1 &1922935071
 GameObject:
   m_ObjectHideFlags: 0
@@ -25096,6 +25121,7 @@ MonoBehaviour:
   Profile3: {fileID: 602764959}
   Profile4: {fileID: 771565208}
   Profile5: {fileID: 983196344}
+  information: {fileID: 2104957904}
 --- !u!1 &1939502917
 GameObject:
   m_ObjectHideFlags: 0
@@ -25703,6 +25729,17 @@ MonoBehaviour:
           m_StringArgument: Game
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2104957904}
+        m_MethodName: changeUserUpdate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2001239087
@@ -26070,6 +26107,7 @@ MonoBehaviour:
   trophyCostume1: {fileID: 1964932846}
   trophyCostume2: {fileID: 1779402955}
   trophyCostume3: {fileID: 742195248}
+  information: {fileID: 2104957904}
 --- !u!114 &2039333965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27383,6 +27421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userID: {fileID: 708613800}
+  LoginWindow: {fileID: 991993351}
 --- !u!1 &2114382656
 GameObject:
   m_ObjectHideFlags: 0

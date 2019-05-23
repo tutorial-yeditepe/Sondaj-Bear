@@ -36,6 +36,7 @@ public class BuyCostume : MonoBehaviour
     private String[] Lines;
     private string userName;
     private string form;
+    public StaticVariables information;
 
     //Line checking as follows: 
     //password / coin / currentCostume / #ofcostumes /costume1 / costume2 / costume3 / costume4 / costume5 / trophy1 / trophy2 / trophy3 / trophy4 / trophy5 / trophy6 / numberOfCatchFish
@@ -44,6 +45,11 @@ public class BuyCostume : MonoBehaviour
     //Check if coin is enough to buy.
     //If enough confirm buy and change necessary variables at .txt file.
     //If not show error pop-up message.
+
+    public void updateTheInfo() {
+
+        information.changeUserLogged();
+    }
 
     public void BuyOperation1() {       //Buy operation for costume1.
 
@@ -160,7 +166,7 @@ public class BuyCostume : MonoBehaviour
             System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
             costumeNotBought.SetActive(false);
             costumeBought.SetActive(true);
-
+            updateTheInfo();
 
         }else {
 
@@ -284,7 +290,7 @@ public class BuyCostume : MonoBehaviour
             System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
             costumeNotBought.SetActive(false);
             costumeBought.SetActive(true);
-
+            updateTheInfo();
 
         }else {
 
@@ -407,7 +413,7 @@ public class BuyCostume : MonoBehaviour
             System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
             costumeNotBought.SetActive(false);
             costumeBought.SetActive(true);
-
+            updateTheInfo();
 
         }else {
 
@@ -530,7 +536,7 @@ public class BuyCostume : MonoBehaviour
             System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
             costumeNotBought.SetActive(false);
             costumeBought.SetActive(true);
-
+            updateTheInfo();
 
         }else {
 
@@ -653,7 +659,7 @@ public class BuyCostume : MonoBehaviour
             System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
             costumeNotBought.SetActive(false);
             costumeBought.SetActive(true);
-
+            updateTheInfo();
 
         }else {
 

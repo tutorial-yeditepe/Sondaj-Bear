@@ -449,6 +449,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b49afa374f5861d44871c52980a3bd0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userID: {fileID: 0}
+  LoginWindow: {fileID: 0}
 --- !u!1001 &157226067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1293,7 +1295,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 106721705}
-        m_MethodName: changeDeneme
+        m_MethodName: changeUserUpdate
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
