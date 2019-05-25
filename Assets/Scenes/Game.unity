@@ -242,6 +242,9 @@ MonoBehaviour:
   coins: 0
   totalPoint: 0
   totalFish: 0
+  trophy1: 
+  trophy2: 
+  trophy3: 
   moveSpeed: 5
   scoreBoost: 1
   hookSpeed: 4
