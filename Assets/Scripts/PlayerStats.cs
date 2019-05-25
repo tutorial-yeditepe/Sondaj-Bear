@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
+    public GameObject gameOverPanel;
+
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI coinText;
 
@@ -82,6 +84,11 @@ public class PlayerStats : MonoBehaviour
     {
         health += change;
         iconPanel.UpdateHealthImg();
+
+        if(health == 0)
+        {
+            gameOverPanel.SetActive(true);
+        }
     }
 
     public void UpdatePowerUp(string name, int val)

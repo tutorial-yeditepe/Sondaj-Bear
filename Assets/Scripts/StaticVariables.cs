@@ -91,31 +91,85 @@ public class StaticVariables : MonoBehaviour
         playerTrophy2 = playerStats.GetComponent<PlayerStats>().trophy2.ToString();
         playerTrophy3 = playerStats.GetComponent<PlayerStats>().trophy3.ToString();
 
-        Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
-        form = Lines[0] 
-            + Environment.NewLine + playerCoins 
-            + Environment.NewLine + Lines[2] 
-            + Environment.NewLine + Lines[3] 
-            + Environment.NewLine + Lines[4] 
-            + Environment.NewLine + Lines[5] 
-            + Environment.NewLine + Lines[6] 
-            + Environment.NewLine + Lines[7] 
-            + Environment.NewLine + Lines[8] 
-            + Environment.NewLine + Lines[9] 
-            + Environment.NewLine + Lines[10] 
-            + Environment.NewLine + Lines[11] 
-            + Environment.NewLine + playerTrophy1 
-            + Environment.NewLine + playerTrophy2
-            + Environment.NewLine + playerTrophy3
-            + Environment.NewLine + playerFishCount;
-        System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
-        Debug.Log(form);
+        if (userName != "guest")
+        {
+            Lines = System.IO.File.ReadAllLines(Application.persistentDataPath + "/" + userName + ".txt");
+            form = Lines[0]
+                + Environment.NewLine + playerCoins
+                + Environment.NewLine + Lines[2]
+                + Environment.NewLine + Lines[3]
+                + Environment.NewLine + Lines[4]
+                + Environment.NewLine + Lines[5]
+                + Environment.NewLine + Lines[6]
+                + Environment.NewLine + Lines[7]
+                + Environment.NewLine + Lines[8]
+                + Environment.NewLine + Lines[9]
+                + Environment.NewLine + Lines[10]
+                + Environment.NewLine + Lines[11]
+                + Environment.NewLine + playerTrophy1
+                + Environment.NewLine + playerTrophy2
+                + Environment.NewLine + playerTrophy3
+                + Environment.NewLine + playerFishCount;
+            System.IO.File.WriteAllText(Application.persistentDataPath + "/" + userName + ".txt", form);
+            Debug.Log(form);
+        }
 
         //Check highscores and update highscores table.
         Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/highscores.txt");
-        String[,] scoresArray = new String[5,2];
-        
-        sceneIndex = "0";
+
+        List<string> scoresArray = new List<string>();
+        List<string> namesArray = new List<string>();
+
+        for (int i = 0; i < 5; i++)
+        {
+            if (Lines[2 * i] != "--")
+            {
+                namesArray.Add(Lines[2*i]);
+                scoresArray.Add(Lines[2*i+1]);
+            }
+            else
+            {
+                break;
+            }
+        }
+        scoresArray.Add(playerScore);
+        namesArray.Add(userName);
+
+        int length = scoresArray.Count;
+        for (int i = 0; i < length; i++)
+        {
+            for (int j = 1; j < length; j++)
+            {
+                if (int.Parse(scoresArray[j - 1]) > int.Parse(scoresArray[j]))
+                {
+                    string temp = scoresArray[j - 1];
+                    scoresArray[j - 1] = scoresArray[j];
+                    scoresArray[j] = temp;
+
+                    temp = namesArray[j -1];
+                    namesArray[j - 1] = namesArray[j];
+                    namesArray[j] = temp;
+                }
+            }
+        }
+
+        namesArray.Reverse();
+        scoresArray.Reverse();
+
+        form = namesArray[0] + Environment.NewLine + scoresArray[0];
+        for (int i = 1; i < 5; i++)
+        {
+            if (i < namesArray.Count)
+            {
+                form += Environment.NewLine + namesArray[i] + Environment.NewLine + scoresArray[i];
+            }
+            else
+            {
+                form += Environment.NewLine + "--" + Environment.NewLine + "--";
+            }
+        }
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/highscores.txt", form);
+        sceneIndex = "0";  
     }
 
     //Check at every start of every scene.
