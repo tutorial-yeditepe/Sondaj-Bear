@@ -108,9 +108,6 @@ public class StaticVariables : MonoBehaviour
         System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
         Debug.Log(form);
         sceneIndex = "0";
-        }
-
-
     }
 
     //Check at every start of every scene.
