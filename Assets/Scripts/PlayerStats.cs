@@ -17,7 +17,7 @@ public class PlayerStats : MonoBehaviour
     public int maxHealth = 4;
 
     private string playerName;
-    private float coins;
+    public float coins;
 
     [SerializeField] [Range(1.0f, 10.0f)] public float moveSpeed = 5.0f;
     public float scoreBoost = 1;  // Point multiplier.

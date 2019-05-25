@@ -48,6 +48,7 @@ public class StaticVariables : MonoBehaviour
     //Line checking as follows: 
     //password / coin / currentCostume / #ofcostumes /costume1 / costume2 / costume3 / costume4 / costume5 / trophy1 / trophy2 / trophy3 / trophy4 / trophy5 / trophy6 / numberOfCatchFish
 
+    //For switching between scenes.
     public void changeUserUpdate() {
 
         if(sceneIndex == "0") {
@@ -60,6 +61,7 @@ public class StaticVariables : MonoBehaviour
                 
     }
 
+    //When a user signs out.
     public void changeUserSignOut() {
         userName = "guest";
         coins = "0";
@@ -68,6 +70,7 @@ public class StaticVariables : MonoBehaviour
         userLogged = "0";
     }
 
+    //When a game over happens.
     public void gameOverProtocol() {
 
         if(sceneIndex == "0") {
@@ -75,6 +78,9 @@ public class StaticVariables : MonoBehaviour
             Debug.Log(sceneIndex);
         }else {
          
+            playerCoins = playerStats.GetComponent<PlayerStats>().coins.ToString();
+            playerScore = playerStats.GetComponent<PlayerStats>().totalPoint.ToString();
+
             Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
             form = Lines[0] 
                 + Environment.NewLine + playerCoins 
@@ -95,17 +101,18 @@ public class StaticVariables : MonoBehaviour
 
             System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
             sceneIndex = "0";
-            Debug.Log(sceneIndex);
+            Debug.Log(form);
         }
 
 
     }
 
+    //Check at every start of every scene.
     void Start() {
 
         if(userLogged == "1" && sceneIndex == "0") {
         
-            LoginWindow.LoginUpdate(userName,coins);
+            LoginWindow.LoginUpdate(userName);
             Debug.Log(sceneIndex);
 
         }

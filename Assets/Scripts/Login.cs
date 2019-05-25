@@ -288,10 +288,11 @@ public class Login : MonoBehaviour
         }
     }
 
-    public void LoginUpdate(string usersName, string coinsUpdate) {
+    public void LoginUpdate(string usersName) {
 
         Debug.Log("INSIDE");
         Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+usersName+".txt");
+        Coins = Lines[1];
         //Costume1 checking.
             if(Lines[4] == "0") {
 
@@ -470,7 +471,7 @@ public class Login : MonoBehaviour
             }
 
             changedUsername.GetComponent<TextMeshProUGUI>().text = usersName;
-            playerCoins.GetComponent<TextMeshProUGUI>().text = coinsUpdate;
+            playerCoins.GetComponent<TextMeshProUGUI>().text = Coins;
             playGuestButton.SetActive(false);
             playButton.SetActive(true);
             loginButton.SetActive(false);
