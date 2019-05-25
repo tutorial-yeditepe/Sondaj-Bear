@@ -8,14 +8,24 @@ using TMPro;
 
 public class StaticVariables : MonoBehaviour
 {
+    //Varianbles for getting data.
     public GameObject userID;
-    private String[] Lines;
-    
-    public Login LoginWindow;
+    public GameObject playerStats;
 
+    //Variables for saving data.
+    private String[] Lines;
+    private string form;    
+    public Login LoginWindow;
+    public string playerFishCount;
+    public string playerCoins;
+    public string playerScore;
+    public string playerTrophy1;
+    public string playerTrophy2;
+    public string playerTrophy3;
+
+    //Static variables.
     static public string userLogged = "0";
     static public string sceneIndex = "0";
-
     static public string userName = "guest";
     static public string coins = "0";
     static public string costume = "0";
@@ -35,6 +45,9 @@ public class StaticVariables : MonoBehaviour
         Debug.Log(numberOfFish);
     }
 
+    //Line checking as follows: 
+    //password / coin / currentCostume / #ofcostumes /costume1 / costume2 / costume3 / costume4 / costume5 / trophy1 / trophy2 / trophy3 / trophy4 / trophy5 / trophy6 / numberOfCatchFish
+
     public void changeUserUpdate() {
 
         if(sceneIndex == "0") {
@@ -53,6 +66,39 @@ public class StaticVariables : MonoBehaviour
         costume = "0";
         numberOfFish = "0";
         userLogged = "0";
+    }
+
+    public void gameOverProtocol() {
+
+        if(sceneIndex == "0") {
+            sceneIndex = "1";
+            Debug.Log(sceneIndex);
+        }else {
+         
+            Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
+            form = Lines[0] 
+                + Environment.NewLine + playerCoins 
+                + Environment.NewLine + Lines[2] 
+                + Environment.NewLine + Lines[3] 
+                + Environment.NewLine + Lines[4] 
+                + Environment.NewLine + Lines[5] 
+                + Environment.NewLine + Lines[6] 
+                + Environment.NewLine + Lines[7] 
+                + Environment.NewLine + Lines[8] 
+                + Environment.NewLine + Lines[9] 
+                + Environment.NewLine + Lines[10] 
+                + Environment.NewLine + Lines[11] 
+                + Environment.NewLine + playerTrophy1 
+                + Environment.NewLine + playerTrophy2 
+                + Environment.NewLine + playerTrophy3
+                + Environment.NewLine + playerFishCount;
+
+            System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
+            sceneIndex = "0";
+            Debug.Log(sceneIndex);
+        }
+
+
     }
 
     void Start() {

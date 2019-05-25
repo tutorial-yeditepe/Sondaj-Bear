@@ -49,8 +49,8 @@ public class EquipCostume : MonoBehaviour
         form = Lines[0] 
                 + Environment.NewLine + Lines[1] 
                 + Environment.NewLine + "0" 
-                + Environment.NewLine + Lines[2] 
                 + Environment.NewLine + Lines[3] 
+                + Environment.NewLine + Lines[4] 
                 + Environment.NewLine + Lines[5] 
                 + Environment.NewLine + Lines[6] 
                 + Environment.NewLine + Lines[7] 
@@ -85,8 +85,8 @@ public class EquipCostume : MonoBehaviour
         form = Lines[0] 
                 + Environment.NewLine + Lines[1] 
                 + Environment.NewLine + "1" 
-                + Environment.NewLine + Lines[2] 
                 + Environment.NewLine + Lines[3] 
+                + Environment.NewLine + Lines[4] 
                 + Environment.NewLine + Lines[5] 
                 + Environment.NewLine + Lines[6] 
                 + Environment.NewLine + Lines[7] 
@@ -121,8 +121,8 @@ public class EquipCostume : MonoBehaviour
         form = Lines[0] 
                 + Environment.NewLine + Lines[1] 
                 + Environment.NewLine + "2" 
-                + Environment.NewLine + Lines[2] 
                 + Environment.NewLine + Lines[3] 
+                + Environment.NewLine + Lines[4] 
                 + Environment.NewLine + Lines[5] 
                 + Environment.NewLine + Lines[6] 
                 + Environment.NewLine + Lines[7] 
@@ -157,8 +157,8 @@ public class EquipCostume : MonoBehaviour
         form = Lines[0] 
                 + Environment.NewLine + Lines[1] 
                 + Environment.NewLine + "3" 
-                + Environment.NewLine + Lines[2] 
                 + Environment.NewLine + Lines[3] 
+                + Environment.NewLine + Lines[4] 
                 + Environment.NewLine + Lines[5] 
                 + Environment.NewLine + Lines[6] 
                 + Environment.NewLine + Lines[7] 
@@ -193,8 +193,8 @@ public class EquipCostume : MonoBehaviour
         form = Lines[0] 
                 + Environment.NewLine + Lines[1] 
                 + Environment.NewLine + "4" 
-                + Environment.NewLine + Lines[2] 
                 + Environment.NewLine + Lines[3] 
+                + Environment.NewLine + Lines[4] 
                 + Environment.NewLine + Lines[5] 
                 + Environment.NewLine + Lines[6] 
                 + Environment.NewLine + Lines[7] 
@@ -229,8 +229,8 @@ public class EquipCostume : MonoBehaviour
         form = Lines[0] 
                 + Environment.NewLine + Lines[1] 
                 + Environment.NewLine + "5" 
-                + Environment.NewLine + Lines[2] 
                 + Environment.NewLine + Lines[3] 
+                + Environment.NewLine + Lines[4] 
                 + Environment.NewLine + Lines[5] 
                 + Environment.NewLine + Lines[6] 
                 + Environment.NewLine + Lines[7] 
