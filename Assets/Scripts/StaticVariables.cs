@@ -83,11 +83,15 @@ public class StaticVariables : MonoBehaviour
     //When a game over happens.
     public void gameOverProtocol() {
 
+        //Update user info. Such as coins, number of fish cought and trophies.
         playerCoins = playerStats.GetComponent<PlayerStats>().coins.ToString();
         playerScore = playerStats.GetComponent<PlayerStats>().totalPoint.ToString();
         playerFishCount = playerStats.GetComponent<PlayerStats>().totalFish.ToString();
-        Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
+        playerTrophy1 = playerStats.GetComponent<PlayerStats>().trophy1.ToString();
+        playerTrophy2 = playerStats.GetComponent<PlayerStats>().trophy2.ToString();
+        playerTrophy3 = playerStats.GetComponent<PlayerStats>().trophy3.ToString();
 
+        Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
         form = Lines[0] 
             + Environment.NewLine + playerCoins 
             + Environment.NewLine + Lines[2] 
@@ -100,13 +104,17 @@ public class StaticVariables : MonoBehaviour
             + Environment.NewLine + Lines[9] 
             + Environment.NewLine + Lines[10] 
             + Environment.NewLine + Lines[11] 
-            + Environment.NewLine + Lines[12] 
-            + Environment.NewLine + Lines[13] 
-            + Environment.NewLine + Lines[14]
+            + Environment.NewLine + playerTrophy1 
+            + Environment.NewLine + playerTrophy2
+            + Environment.NewLine + playerTrophy3
             + Environment.NewLine + playerFishCount;
-
         System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
         Debug.Log(form);
+
+        //Check highscores and update highscores table.
+        Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/highscores.txt");
+        String[,] scoresArray = new String[5,2];
+        
         sceneIndex = "0";
     }
 
