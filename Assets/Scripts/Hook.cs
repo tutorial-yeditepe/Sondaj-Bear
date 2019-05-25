@@ -114,6 +114,7 @@ public class Hook : MonoBehaviour
             float coin = fish.GetComponent<SpawneeMovement>().coin;
             player.UpdateCoins(coin);
 
+            player.UpdateFishCount();
             Destroy(fish);
             GetComponent<BoxCollider2D>().enabled = true; // Enable to catch other spawnees.
         }
