@@ -30,13 +30,20 @@ public class StaticVariables : MonoBehaviour
     static public string coins = "0";
     static public string costume = "0";
     static public string numberOfFish = "0";
+    static public string trophy1 = "0";
+    static public string trophy2 = "0";
+    static public string trophy3 = "0";
 
+    //When a user logged in.
     public void changeUserLogged() {
 
         userName = userID.GetComponent<TextMeshProUGUI>().text;
         Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
         coins = Lines[1];
         costume = Lines[2];
+        trophy1 = Lines[12];
+        trophy2 = Lines[13];
+        trophy3 = Lines[14];
         numberOfFish = Lines[15];
         userLogged = "1";
         Debug.Log(userName);
@@ -67,41 +74,40 @@ public class StaticVariables : MonoBehaviour
         coins = "0";
         costume = "0";
         numberOfFish = "0";
+        trophy1 = "0";
+        trophy2 = "0";
+        trophy3 = "0";
         userLogged = "0";
     }
 
     //When a game over happens.
     public void gameOverProtocol() {
 
-        if(sceneIndex == "0") {
-            sceneIndex = "1";
-            Debug.Log(sceneIndex);
-        }else {
-         
-            playerCoins = playerStats.GetComponent<PlayerStats>().coins.ToString();
-            playerScore = playerStats.GetComponent<PlayerStats>().totalPoint.ToString();
+        playerCoins = playerStats.GetComponent<PlayerStats>().coins.ToString();
+        playerScore = playerStats.GetComponent<PlayerStats>().totalPoint.ToString();
+        playerFishCount = playerStats.GetComponent<PlayerStats>().totalFish.ToString();
+        Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
 
-            Lines = System.IO.File.ReadAllLines(Application.persistentDataPath+"/"+userName+".txt");
-            form = Lines[0] 
-                + Environment.NewLine + playerCoins 
-                + Environment.NewLine + Lines[2] 
-                + Environment.NewLine + Lines[3] 
-                + Environment.NewLine + Lines[4] 
-                + Environment.NewLine + Lines[5] 
-                + Environment.NewLine + Lines[6] 
-                + Environment.NewLine + Lines[7] 
-                + Environment.NewLine + Lines[8] 
-                + Environment.NewLine + Lines[9] 
-                + Environment.NewLine + Lines[10] 
-                + Environment.NewLine + Lines[11] 
-                + Environment.NewLine + playerTrophy1 
-                + Environment.NewLine + playerTrophy2 
-                + Environment.NewLine + playerTrophy3
-                + Environment.NewLine + playerFishCount;
+        form = Lines[0] 
+            + Environment.NewLine + playerCoins 
+            + Environment.NewLine + Lines[2] 
+            + Environment.NewLine + Lines[3] 
+            + Environment.NewLine + Lines[4] 
+            + Environment.NewLine + Lines[5] 
+            + Environment.NewLine + Lines[6] 
+            + Environment.NewLine + Lines[7] 
+            + Environment.NewLine + Lines[8] 
+            + Environment.NewLine + Lines[9] 
+            + Environment.NewLine + Lines[10] 
+            + Environment.NewLine + Lines[11] 
+            + Environment.NewLine + Lines[12] 
+            + Environment.NewLine + Lines[13] 
+            + Environment.NewLine + Lines[14]
+            + Environment.NewLine + playerFishCount;
 
-            System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
-            sceneIndex = "0";
-            Debug.Log(form);
+        System.IO.File.WriteAllText(Application.persistentDataPath+"/"+userName+".txt",form);
+        Debug.Log(form);
+        sceneIndex = "0";
         }
 
 
