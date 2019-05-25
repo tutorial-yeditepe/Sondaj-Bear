@@ -11,7 +11,6 @@ public class Hook : MonoBehaviour
 
     private bool caughtFish = false;
     private bool caughtPowerUp = false;
-    private bool appliedPU = false;
     private bool caughtObstacle = false;
 
     private bool flag = false;
@@ -122,9 +121,9 @@ public class Hook : MonoBehaviour
 
     void CatchPowerUp()
     {
-        if (transform.localPosition.y < -5)
-            powerUp.transform.position = transform.position - new Vector3(10, 50, 0);
-        else
+        powerUp.transform.position = transform.position - new Vector3(10, 50, 0);
+
+        if(transform.localPosition.y > -5)
         {
             caughtPowerUp = false;
 

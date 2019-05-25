@@ -12,7 +12,7 @@ public class PlayerStats : MonoBehaviour
     public IconPanelScript iconPanel;
     public Sprite[] costumes;
     public GameObject bear;
-
+    
     public int health;
     public int maxHealth = 4;
 
@@ -20,6 +20,10 @@ public class PlayerStats : MonoBehaviour
     public float coins;
     public int totalPoint = 0;
     public int totalFish;
+
+    public string trophy1; // Caught 10 fish.
+    public string trophy2; // Caught 100 fish.
+    public string trophy3; // Caught 1000 fish.
 
     [SerializeField] [Range(1.0f, 10.0f)] public float moveSpeed = 5.0f;
     public float scoreBoost = 1;  // Point multiplier.
@@ -34,10 +38,14 @@ public class PlayerStats : MonoBehaviour
 
         health = maxHealth;                     // Initialize current health as max health.
 
-        string costume = StaticVariables.costume;
+        string costume = StaticVariables.costume;     // Get the right costume for our player
         bear.GetComponent<SpriteRenderer>().sprite = costumes[int.Parse(costume)];
         
-        totalFish = int.Parse(StaticVariables.numberOfFish);
+        totalFish = int.Parse(StaticVariables.numberOfFish);   // Keep counting fishes.
+
+        trophy1 = StaticVariables.trophy1; // User's trophy records.
+        trophy2 = StaticVariables.trophy2;
+        trophy3 = StaticVariables.trophy3;
     }
 
     public void UpdateCoins(float coin)
@@ -49,6 +57,19 @@ public class PlayerStats : MonoBehaviour
     public void UpdateFishCount()
     {
         totalFish++;
+        
+        if(totalFish >= 1000 && trophy3 != "1")
+        {
+            trophy3 = "1";
+        }
+        else if (totalFish >= 100 && trophy2 != "1")
+        {
+            trophy2 = "1";
+        }
+        else if (totalFish >= 10 && trophy1 != "1")
+        {
+            trophy1 = "1";
+        }
     }
 
     public void UpdateScore(float point)
