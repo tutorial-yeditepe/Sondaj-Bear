@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerStats : MonoBehaviour
 {
+    public GameObject trophyPanel;
     public GameObject gameOverPanel;
 
     public TextMeshProUGUI scoreText;
@@ -63,15 +64,25 @@ public class PlayerStats : MonoBehaviour
         if(totalFish >= 1000 && trophy3 != "1")
         {
             trophy3 = "1";
+            StartCoroutine(TrophyPanel());
         }
         else if (totalFish >= 100 && trophy2 != "1")
         {
             trophy2 = "1";
+            StartCoroutine(TrophyPanel());
         }
         else if (totalFish >= 10 && trophy1 != "1")
         {
             trophy1 = "1";
+            StartCoroutine(TrophyPanel());
         }
+    }
+
+    IEnumerator TrophyPanel()
+    {
+        trophyPanel.SetActive(true);
+        yield return new WaitForSeconds(5);
+        trophyPanel.SetActive(false);
     }
 
     public void UpdateScore(float point)
