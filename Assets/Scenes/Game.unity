@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a234e248d8458344c8f3eed11124d4ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trophyPanel: {fileID: 301580037}
   gameOverPanel: {fileID: 1606387805}
   scoreText: {fileID: 483599500}
   coinText: {fileID: 216793514}
