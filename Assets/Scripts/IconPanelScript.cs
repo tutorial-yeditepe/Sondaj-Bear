@@ -14,7 +14,7 @@ public class IconPanelScript : MonoBehaviour
 
     private int numFH = 0;
     private int numSB = 0;
-    private int numH = 0;
+    //private int numH = 0;
     private int numSU = 0;
 
     void Start()
