@@ -19,7 +19,7 @@ public class Spawner : MonoBehaviour
     {
         int prefab = Random.Range(0, spawnees.Length); // Index number for selecting a prefab.
         int side = Random.Range(0, spawnSides.Length); // Index number for selecting a spawn side (0 = left, 1 = right).
-        int spawnY = Random.Range(20, ((Screen.height * 50) / 100)); // A "y" value for our spawn position.
+        int spawnY = Random.Range(20, ((Screen.height * 45) / 100)); // A "y" value for our spawn position.
 
         Vector2 spawnPos = spawnSides[side].transform.localPosition;
         Quaternion spawnRot = spawnSides[side].transform.rotation;

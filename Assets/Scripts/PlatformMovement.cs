@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlatformMovement : MonoBehaviour
 {
     private PlayerStats player;
+    public GameObject platform;
 
     private float width = Screen.width;
     private float height = Screen.height;
@@ -22,7 +23,7 @@ public class PlatformMovement : MonoBehaviour
     private void Start()
     {
         pos = this.transform.position;
-        charWidth = this.GetComponent<SpriteRenderer>().bounds.size.x;
+        charWidth = platform.GetComponent<SpriteRenderer>().bounds.size.x;
         center = width / 2;
         float camDistance = Vector2.Distance(transform.position, Camera.main.transform.position);
         bottomCorner = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, camDistance));
