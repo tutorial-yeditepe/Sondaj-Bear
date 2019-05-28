@@ -12,7 +12,7 @@ public class ChangeBackground : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.Find("Platform").GetComponent<PlayerStats>();
+        player = GameObject.Find("Bear And Platform").GetComponent<PlayerStats>();
         image = this.GetComponent<Image>();
     }
 

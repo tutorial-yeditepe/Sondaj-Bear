@@ -5,6 +5,7 @@ using UnityEngine;
 public class Hook : MonoBehaviour
 {
     private PlayerStats player;
+    public GameObject platform;
     private GameObject fish;
     private GameObject powerUp;
     private GameObject obstacle;
@@ -109,6 +110,7 @@ public class Hook : MonoBehaviour
 
             float point = fish.GetComponent<SpawneeMovement>().point * player.scoreBoost;
             player.UpdateScore(point);
+            platform.GetComponent<PlatformMelt>().IncreaseSize();
 
             float coin = fish.GetComponent<SpawneeMovement>().coin;
             player.UpdateCoins(coin);
@@ -129,6 +131,7 @@ public class Hook : MonoBehaviour
 
             float point = powerUp.GetComponent<SpawneeMovement>().point * player.scoreBoost;
             player.UpdateScore(point);
+            platform.GetComponent<PlatformMelt>().IncreaseSize();
 
             float coin = powerUp.GetComponent<SpawneeMovement>().coin;
             player.UpdateCoins(coin);

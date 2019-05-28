@@ -129,9 +129,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 22032580}
-  - component: {fileID: 22032585}
-  - component: {fileID: 22032581}
   - component: {fileID: 22032582}
+  - component: {fileID: 22032581}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Player
@@ -147,12 +146,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 22032579}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 190.00003, z: 0}
+  m_LocalPosition: {x: 0, y: 190.00002, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 1}
-  m_Children:
-  - {fileID: 592773268}
-  m_Father: {fileID: 2104957901}
-  m_RootOrder: 1
+  m_Children: []
+  m_Father: {fileID: 1860817777}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &22032581
 MonoBehaviour:
@@ -163,9 +161,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 22032579}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56c0fed9234cbc44eb2f9ca6eb4cbaa0, type: 3}
+  m_Script: {fileID: 11500000, guid: 4be2e6a25e9d93540bf20c7b20e089df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Platform: {fileID: 22032579}
 --- !u!212 &22032582
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -214,42 +213,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &22032585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 22032579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a234e248d8458344c8f3eed11124d4ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trophyPanel: {fileID: 301580037}
-  gameOverPanel: {fileID: 1606387805}
-  scoreText: {fileID: 483599500}
-  coinText: {fileID: 216793514}
-  iconPanel: {fileID: 460175075}
-  costumes:
-  - {fileID: 21300000, guid: aeb493c40b632744e9c3287468d35a6b, type: 3}
-  - {fileID: 21300000, guid: f37cea66cf5403a47b117b60603ee0a6, type: 3}
-  - {fileID: 21300000, guid: 1d5b416251e15bb409caa7d743971505, type: 3}
-  - {fileID: 21300000, guid: ecebe0152c3365d45a9218be997f5b95, type: 3}
-  - {fileID: 21300000, guid: fe2489966fe95644fbadc43e1ba3dd62, type: 3}
-  - {fileID: 21300000, guid: 13603c51be450cc4d8ab75f2110029fd, type: 3}
-  bear: {fileID: 592773267}
-  health: 4
-  maxHealth: 4
-  coins: 0
-  totalPoint: 0
-  totalFish: 0
-  trophy1: 
-  trophy2: 
-  trophy3: 
-  moveSpeed: 5
-  scoreBoost: 1
-  hookSpeed: 4
 --- !u!1 &35975611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,7 +1730,7 @@ MonoBehaviour:
   - {fileID: 1963546949}
   - {fileID: 1575893149}
   - {fileID: 35975613}
-  player: {fileID: 22032585}
+  player: {fileID: 1860817779}
 --- !u!1 &483599498
 GameObject:
   m_ObjectHideFlags: 0
@@ -2366,12 +2329,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 592773267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 3.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0.23699999}
+  m_LocalPosition: {x: -2, y: 261.99997, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 0.23699997}
   m_Children:
   - {fileID: 1275791373}
-  m_Father: {fileID: 22032580}
-  m_RootOrder: 0
+  m_Father: {fileID: 1860817777}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &592773269
 SpriteRenderer:
@@ -3495,6 +3458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 061f6d9a6764c9b4f98192314b8cde38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  platform: {fileID: 22032579}
   duration: 30
   speed: 4
 --- !u!212 &1022397503
@@ -5359,6 +5323,94 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1834788877}
   m_CullTransparentMesh: 0
+--- !u!1 &1860817776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1860817777}
+  - component: {fileID: 1860817778}
+  - component: {fileID: 1860817779}
+  m_Layer: 5
+  m_Name: Bear And Platform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1860817777
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860817776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 22032580}
+  - {fileID: 592773268}
+  m_Father: {fileID: 2104957901}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1860817778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860817776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56c0fed9234cbc44eb2f9ca6eb4cbaa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platform: {fileID: 22032579}
+--- !u!114 &1860817779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860817776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a234e248d8458344c8f3eed11124d4ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trophyPanel: {fileID: 301580037}
+  gameOverPanel: {fileID: 1606387805}
+  scoreText: {fileID: 483599500}
+  coinText: {fileID: 216793514}
+  iconPanel: {fileID: 460175075}
+  costumes:
+  - {fileID: 21300000, guid: aeb493c40b632744e9c3287468d35a6b, type: 3}
+  - {fileID: 21300000, guid: f37cea66cf5403a47b117b60603ee0a6, type: 3}
+  - {fileID: 21300000, guid: 1d5b416251e15bb409caa7d743971505, type: 3}
+  - {fileID: 21300000, guid: ecebe0152c3365d45a9218be997f5b95, type: 3}
+  - {fileID: 21300000, guid: fe2489966fe95644fbadc43e1ba3dd62, type: 3}
+  - {fileID: 21300000, guid: 13603c51be450cc4d8ab75f2110029fd, type: 3}
+  bear: {fileID: 592773267}
+  health: 4
+  maxHealth: 4
+  coins: 0
+  totalPoint: 0
+  totalFish: 0
+  trophy1: 
+  trophy2: 
+  trophy3: 
+  moveSpeed: 5
+  scoreBoost: 1
+  hookSpeed: 4
 --- !u!1 &1942817153
 GameObject:
   m_ObjectHideFlags: 0
@@ -5772,7 +5824,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1158833227}
-  - {fileID: 22032580}
+  - {fileID: 1860817777}
   - {fileID: 1637649714}
   - {fileID: 460175072}
   - {fileID: 301580038}
