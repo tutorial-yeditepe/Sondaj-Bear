@@ -3398,11 +3398,21 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2675477231939268851, guid: 6a7e0d39a1a07834483fc5e95d6dd99d,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 2675477231939268848, guid: 6a7e0d39a1a07834483fc5e95d6dd99d,
         type: 3}
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 1606387805}
+    - target: {fileID: 2675477231939268848, guid: 6a7e0d39a1a07834483fc5e95d6dd99d,
+        type: 3}
+      propertyPath: platform
+      value: 
+      objectReference: {fileID: 22032579}
     - target: {fileID: 2675477229934829317, guid: 6a7e0d39a1a07834483fc5e95d6dd99d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -3416,7 +3426,7 @@ PrefabInstance:
     - target: {fileID: 2675477229843176581, guid: 6a7e0d39a1a07834483fc5e95d6dd99d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -571.00006
+      value: -571
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a7e0d39a1a07834483fc5e95d6dd99d, type: 3}
