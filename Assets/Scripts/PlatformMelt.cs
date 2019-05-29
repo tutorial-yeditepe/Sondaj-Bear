@@ -23,8 +23,8 @@ public class PlatformMelt : MonoBehaviour
             Platform.transform.localScale -= new Vector3(0.1f, 0.1f, 0);
     }
 
-    public void IncreaseSize()
+    public void IncreaseSize(float size)
     {
-        Platform.transform.localScale += new Vector3(1,1,0);
+        Platform.transform.localScale += new Vector3(size,size,0);
     }
 }
