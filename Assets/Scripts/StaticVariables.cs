@@ -168,6 +168,7 @@ public class StaticVariables : MonoBehaviour
                 form += Environment.NewLine + "--" + Environment.NewLine + "--";
             }
         }
+        Debug.Log(form);
         System.IO.File.WriteAllText(Application.persistentDataPath + "/highscores.txt", form);
         sceneIndex = "0";  
     }

@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   userID: {fileID: 0}
-  playerStats: {fileID: 22032579}
+  playerStats: {fileID: 2675477230096442244}
   LoginWindow: {fileID: 0}
   playerFishCount: 
   playerCoins: 
@@ -3170,7 +3170,7 @@ PrefabInstance:
     - target: {fileID: 5431420846577227912, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5431420846577227912, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
@@ -3181,11 +3181,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 106721703}
+      objectReference: {fileID: 106721705}
     - target: {fileID: 5431420846577227912, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: changeScene
+      value: gameOverProtocol
       objectReference: {fileID: 0}
     - target: {fileID: 5431420846577227912, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
@@ -3220,12 +3220,12 @@ PrefabInstance:
     - target: {fileID: 5431420846577227912, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Menu
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5431420846577227912, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5431420846577227912, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
@@ -3236,16 +3236,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 106721705}
+      objectReference: {fileID: 106721703}
     - target: {fileID: 5431420846577227912, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: gameOverProtocol
+      value: changeScene
       objectReference: {fileID: 0}
     - target: {fileID: 5431420846577227912, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431420846577227912, guid: 2cc0d854ea67bfa4db493319783e7704,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5431420846577227912, guid: 2cc0d854ea67bfa4db493319783e7704,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_StringArgument
+      value: Menu
       objectReference: {fileID: 0}
     - target: {fileID: 8926486239437657369, guid: 2cc0d854ea67bfa4db493319783e7704,
         type: 3}
@@ -3430,3 +3440,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a7e0d39a1a07834483fc5e95d6dd99d, type: 3}
+--- !u!1 &2675477230096442244 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2675477231939268851, guid: 6a7e0d39a1a07834483fc5e95d6dd99d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2675477230096442243}
+  m_PrefabAsset: {fileID: 0}
