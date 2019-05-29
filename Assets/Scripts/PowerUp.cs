@@ -22,6 +22,8 @@ public class PowerUp : MonoBehaviour
             StartCoroutine(FastHook());
         else if (name == "ExtraHealth(Clone)")
             StartCoroutine(ExtraHealth());
+        else if (name == "IceBoost(Clone)")
+            StartCoroutine(ExtraHealth());
     }
 
     IEnumerator SpeedUp()

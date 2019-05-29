@@ -85,6 +85,6 @@ public class IconPanelScript : MonoBehaviour
         else if (name == "ExtraHealth(Clone)")
             numEH += val;
         else if (name == "IceBoost(Clone)")
-            numEH += val;
+            numIB += val;
     }
 }
