@@ -14,8 +14,9 @@ public class IconPanelScript : MonoBehaviour
 
     private int numFH = 0;
     private int numSB = 0;
-    //private int numH = 0;
+    private int numEH = 0;
     private int numSU = 0;
+    private int numIB = 0;
 
     void Start()
     {
@@ -30,18 +31,30 @@ public class IconPanelScript : MonoBehaviour
 
     void Update()
     {
-        if(numFH > 0)
-            powerUpImgs[4].enabled = true;
+        if (numIB > 0)
+            powerUpImgs[0].enabled = true;
         else
-            powerUpImgs[4].enabled = false;
+            powerUpImgs[0].enabled = false;
+
+        if (numEH > 0)
+            powerUpImgs[1].enabled = true;
+        else
+            powerUpImgs[1].enabled = false;
+      
         if (numSU > 0)
             powerUpImgs[2].enabled = true;
         else
             powerUpImgs[2].enabled = false;
+
         if (numSB > 0)
             powerUpImgs[3].enabled = true;
         else
             powerUpImgs[3].enabled = false;
+
+        if (numFH > 0)
+            powerUpImgs[4].enabled = true;
+        else
+            powerUpImgs[4].enabled = false;
     }
 
     public void UpdateHealthImg()
@@ -69,5 +82,9 @@ public class IconPanelScript : MonoBehaviour
             numSU += val;
         else if (name == "ScoreBoost(Clone)")
             numSB += val;
+        else if (name == "ExtraHealth(Clone)")
+            numEH += val;
+        else if (name == "IceBoost(Clone)")
+            numEH += val;
     }
 }

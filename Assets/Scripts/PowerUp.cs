@@ -20,6 +20,8 @@ public class PowerUp : MonoBehaviour
             StartCoroutine(ScoreBoost());
         else if (name == "FastHook(Clone)")
             StartCoroutine(FastHook());
+        else if (name == "ExtraHealth(Clone)")
+            StartCoroutine(ExtraHealth());
     }
 
     IEnumerator SpeedUp()
@@ -68,6 +70,39 @@ public class PowerUp : MonoBehaviour
         player.UpdatePowerUp(name, 1);            // 1 = Enable power up.
         yield return new WaitForSecondsRealtime(5);
         player.hookSpeed -= player.hookSpeed / 3; // Unapply the powerup.
+        player.UpdatePowerUp(name, -1);           // -1 = Disable power up.
+
+        Destroy(gameObject);
+    }
+
+    IEnumerator ExtraHealth()
+    {
+        GetComponent<BoxCollider2D>().enabled = false;
+
+        transform.position = new Vector3(1000, 1000, 0); // A bad way to get power up of our sight.
+                                                         // Somehow disabling the image creates a bug.
+
+        if (player.health < player.maxHealth)
+            player.UpdateHealth(1);
+
+        player.UpdatePowerUp(name, 1);            // 1 = Enable power up.
+        yield return new WaitForSecondsRealtime(1);
+        player.UpdatePowerUp(name, -1);           // -1 = Disable power up.
+
+        Destroy(gameObject);
+    }
+
+    IEnumerator IceBoost()
+    {
+        GetComponent<BoxCollider2D>().enabled = false;
+
+        transform.position = new Vector3(1000, 1000, 0); // A bad way to get power up of our sight.
+                                                         // Somehow disabling the image creates a bug.
+
+        player.platform.GetComponent<PlatformMelt>().IncreaseSize();
+
+        player.UpdatePowerUp(name, 1);            // 1 = Enable power up.
+        yield return new WaitForSecondsRealtime(1);
         player.UpdatePowerUp(name, -1);           // -1 = Disable power up.
 
         Destroy(gameObject);
