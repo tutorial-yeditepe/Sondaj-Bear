@@ -8,6 +8,7 @@ public class PlayerStats : MonoBehaviour
 {
     public GameObject trophyPanel;
     public GameObject gameOverPanel;
+    public GameObject platform;
 
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI coinText;
@@ -100,6 +101,11 @@ public class PlayerStats : MonoBehaviour
         {
             gameOverPanel.SetActive(true);
         }
+    }
+
+    public void PlatformMelted()
+    {
+        gameOverPanel.SetActive(true);
     }
 
     public void UpdatePowerUp(string name, int val)

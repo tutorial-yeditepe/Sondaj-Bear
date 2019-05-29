@@ -6,15 +6,20 @@ public class PlatformMelt : MonoBehaviour
 {
     public GameObject Platform;
 
-    // Update is called once per frame
     void Start()
     {
         InvokeRepeating("Melt", 0, 0.3f);
     }
 
+    private void Update()
+    {
+        if (Platform.transform.localScale.x <= 8)
+            GetComponentInParent<PlayerStats>().PlatformMelted();
+    }
+
     void Melt()
     {
-        if (Platform.transform.localScale.x > 5)
+        if (Platform.transform.localScale.x > 8)
             Platform.transform.localScale -= new Vector3(0.1f, 0.1f, 0);
     }
 
