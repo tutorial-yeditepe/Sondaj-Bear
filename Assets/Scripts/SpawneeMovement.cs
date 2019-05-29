@@ -5,7 +5,7 @@ using UnityEngine;
 public class SpawneeMovement : MonoBehaviour
 {
     public float speed = 5;  // Public for easy debugging.
-    public float point = 100;
+    public float point = 0;
     public float coin = 0;
 
     private int dir;
@@ -43,45 +43,45 @@ public class SpawneeMovement : MonoBehaviour
     {
         if (name == "1(Clone)")
         {
-            point = 5;
-            speed = 5;
-            coin = 5;
+            point = 10;
+            speed = 4;
+            coin = 4;
         }
         else if (name == "2(Clone)")
         {
-            point = 10;
-            speed = 5;
-            coin = 5;
+            point = 15;
+            speed = 7;
+            coin = 7;
         }
         else if (name == "3(Clone)")
         {
-            point = 10;
-            speed = 5;
-            coin = 5;
+            point = 13;
+            speed = 7;
+            coin = 7;
         }
         else if (name == "4(Clone)")
         {
             point = 10;
-            speed = 5;
-            coin = 5;
+            speed = 3;
+            coin = 3;
         }
         else if (name == "5(Clone)")
         {
-            point = 10;
+            point = 11;
             speed = 5;
             coin = 5;
         }
         else if (name == "6(Clone)")
         {
-            point = 10;
-            speed = 5;
-            coin = 5;
+            point = 12;
+            speed = 6;
+            coin = 6;
         }
         else if (name == "7(Clone)")
         {
-            point = 10;
-            speed = 5;
-            coin = 5;
+            point = 15;
+            speed = 7;
+            coin = 7;
         }
         else if (name == "8(Clone)")
         {
@@ -107,6 +107,18 @@ public class SpawneeMovement : MonoBehaviour
             speed = 5;
             coin = 5;
         }
+        else if (name == "ExtraHealth(Clone)")
+        {
+            point = 10;
+            speed = 5;
+            coin = 5;
+        }
+        else if (name == "IceBoost(Clone)")
+        {
+            point = 10;
+            speed = 5;
+            coin = 5;
+        }
         else if (name == "d1(Clone)")
         {
             point = 0;
@@ -120,17 +132,17 @@ public class SpawneeMovement : MonoBehaviour
         else if (name == "d3(Clone)")
         {
             point = 0;
-            speed = 5;
+            speed = (float)4.5;
         }
         else if (name == "d4(Clone)")
         {
             point = 0;
-            speed = 5;
+            speed = 6;
         }
         else if (name == "d5(Clone)")
         {
             point = 0;
-            speed = 5;
+            speed = 7;
         }
         else if (name == "d6(Clone)")
         {
@@ -150,7 +162,7 @@ public class SpawneeMovement : MonoBehaviour
         else if (name == "d9(Clone)")
         {
             point = 0;
-            speed = 5;
+            speed = 8;
         }
         else if (name == "d10(Clone)")
         {

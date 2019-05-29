@@ -101,7 +101,7 @@ public class PowerUp : MonoBehaviour
         transform.position = new Vector3(1000, 1000, 0); // A bad way to get power up of our sight.
                                                          // Somehow disabling the image creates a bug.
 
-        player.platform.GetComponent<PlatformMelt>().IncreaseSize();
+        player.platform.GetComponent<PlatformMelt>().IncreaseSize(6);
 
         player.UpdatePowerUp(name, 1);            // 1 = Enable power up.
         yield return new WaitForSecondsRealtime(1);

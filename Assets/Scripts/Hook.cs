@@ -110,7 +110,7 @@ public class Hook : MonoBehaviour
 
             float point = fish.GetComponent<SpawneeMovement>().point * player.scoreBoost;
             player.UpdateScore(point);
-            platform.GetComponent<PlatformMelt>().IncreaseSize();
+            platform.GetComponent<PlatformMelt>().IncreaseSize(fish.GetComponent<SpawneeMovement>().point / 7);
 
             float coin = fish.GetComponent<SpawneeMovement>().coin;
             player.UpdateCoins(coin);
@@ -131,7 +131,7 @@ public class Hook : MonoBehaviour
 
             float point = powerUp.GetComponent<SpawneeMovement>().point * player.scoreBoost;
             player.UpdateScore(point);
-            platform.GetComponent<PlatformMelt>().IncreaseSize();
+            platform.GetComponent<PlatformMelt>().IncreaseSize(1);
 
             float coin = powerUp.GetComponent<SpawneeMovement>().coin;
             player.UpdateCoins(coin);
