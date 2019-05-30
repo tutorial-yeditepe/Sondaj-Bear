@@ -8,7 +8,7 @@ public class PlatformMelt : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("Melt", 0, 0.3f);
+        InvokeRepeating("Melt", 0, 0.2f);
     }
 
     private void Update()

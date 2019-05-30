@@ -19,7 +19,7 @@ public class ChangeBackground : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.totalPoint >= 50 * counter)
+        if (player.totalPoint >= 100 * counter)
         {
             int number = Random.Range(0,backgrounds.Length); // random background number
             Sprite new_image = backgrounds[number]; // take the new background
